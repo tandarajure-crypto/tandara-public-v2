@@ -86,6 +86,160 @@
     href="../tandara-common/css/subpages-common.css?v=20260916-2"
   >
 
+  <style>
+    .audio-pronunciation-box {
+      margin: 22px 0 30px;
+      padding: 20px 24px;
+      border: 1px solid rgba(120, 88, 45, 0.25);
+      border-radius: 14px;
+      background: rgba(245, 238, 220, 0.75);
+    }
+
+    .audio-pronunciation-title {
+      margin: 0 0 16px !important;
+      color: #4b351c;
+      font-size: 18px !important;
+      font-weight: 700;
+      text-align: left !important;
+    }
+
+    .audio-icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .audio-icon-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      padding: 9px 18px;
+
+      border: 1px solid rgba(75, 53, 28, 0.35);
+      border-radius: 999px;
+
+      background: #ffffff;
+      color: #3d2a16;
+
+      box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.12);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 16px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .audio-icon-button:hover {
+      transform:
+        translateY(-2px)
+        scale(1.02);
+
+      background: #fff8ec;
+
+      box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    .audio-icon-button:focus-visible {
+      outline: 3px solid #7a5e3a;
+      outline-offset: 3px;
+    }
+
+    .audio-icon-button.playing {
+      border-color: #b78c45;
+      background: #f5e5c3;
+    }
+
+    .speaker-icon-image {
+      display: block;
+
+      width: 50px;
+      height: 50px;
+
+      flex: 0 0 50px;
+
+      object-fit: contain;
+
+      transition:
+        transform 0.15s ease;
+    }
+
+    .audio-icon-button.playing
+    .speaker-icon-image {
+      animation:
+        speakerPulse
+        1.2s
+        ease-in-out
+        infinite;
+    }
+
+    .audio-label-small {
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    .audio-status {
+      min-height: 1.4em;
+
+      margin: 14px 0 0 !important;
+
+      color: #4b351c;
+
+      font-size: 14px !important;
+      text-align: left !important;
+    }
+
+    @keyframes speakerPulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .audio-icon-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .audio-icon-button {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .audio-icon-button,
+      .speaker-icon-image {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+
   <script
     defer
     src="../tandara-common/js/subpages-common.js?v=20260916-1"
@@ -275,37 +429,86 @@
 
         <h3>Poslušajte izgovor oba oblika</h3>
 
-        <p>
-          <strong>Hrvatski izgovor – Tandara</strong>
-        </p>
+        <div class="audio-pronunciation-box">
 
-        <audio
-          controls
-          preload="none"
-          aria-label="Hrvatski izgovor prezimena Tandara"
-        >
-          <source
+          <p class="audio-pronunciation-title">
+            Kliknite na zvučnik i poslušajte izgovor
+          </p>
+
+          <div class="audio-icon-row">
+
+            <button
+              type="button"
+              class="audio-icon-button"
+              id="playHR"
+              aria-label="Poslušajte hrvatski izgovor prezimena Tandara"
+              aria-pressed="false"
+            >
+
+              <img
+                class="speaker-icon-image"
+                src="../tandara-common/slike/ikone/zvucnik.png"
+                alt=""
+                aria-hidden="true"
+              >
+
+              <span>
+                Poslušajte hrvatski izgovor<br>
+                <span class="audio-label-small">
+                  Tandara
+                </span>
+              </span>
+
+            </button>
+
+
+            <button
+              type="button"
+              class="audio-icon-button"
+              id="playRO"
+              aria-label="Poslušajte rumunjski izgovor naziva Țândără"
+              aria-pressed="false"
+            >
+
+              <img
+                class="speaker-icon-image"
+                src="../tandara-common/slike/ikone/zvucnik.png"
+                alt=""
+                aria-hidden="true"
+              >
+
+              <span>
+                Poslušajte rumunjski izgovor<br>
+                <span class="audio-label-small">
+                  Țândără
+                </span>
+              </span>
+
+            </button>
+
+          </div>
+
+
+          <audio
+            id="audioHR"
+            preload="auto"
             src="../tandara-common/audio/audio-hr.mp3"
-            type="audio/mpeg"
-          >
-          Vaš preglednik ne podržava reprodukciju zvuka.
-        </audio>
+          ></audio>
 
-        <p>
-          <strong>Rumunjski izgovor – Țândără</strong>
-        </p>
-
-        <audio
-          controls
-          preload="none"
-          aria-label="Rumunjski izgovor naziva Țândără"
-        >
-          <source
+          <audio
+            id="audioRO"
+            preload="auto"
             src="../tandara-common/audio/audio-ro.mp3"
-            type="audio/mpeg"
-          >
-          Vaš preglednik ne podržava reprodukciju zvuka.
-        </audio>
+          ></audio>
+
+          <p
+            class="audio-status"
+            id="audioStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </div>
 
       </section>
 
@@ -471,11 +674,14 @@
 
         <ol>
           <li>aboridžinska riječ,</li>
+
           <li>
             pastoralni posjed <strong>Tandara</strong>
             tijekom 1840-ih,
           </li>
+
           <li>naziv lokaliteta,</li>
+
           <li>
             naziv različitih objekata, ustanova i poslovnih
             subjekata.
@@ -484,7 +690,9 @@
 
         <p>
           Ovo australsko podrijetlo naziva
-          <strong>nije povezano s hrvatskim prezimenom Tandara</strong>;
+          <strong>
+            nije povezano s hrvatskim prezimenom Tandara
+          </strong>;
           riječ je o zasebnom nastanku i razvoju istog ili vrlo
           sličnog naziva.
         </p>
@@ -769,6 +977,234 @@
     </article>
 
   </main>
+
+
+  <script>
+    (() => {
+      "use strict";
+
+      const audioHR =
+        document.getElementById("audioHR");
+
+      const audioRO =
+        document.getElementById("audioRO");
+
+      const btnHR =
+        document.getElementById("playHR");
+
+      const btnRO =
+        document.getElementById("playRO");
+
+      const audioStatus =
+        document.getElementById("audioStatus");
+
+
+      if (
+        !audioHR ||
+        !audioRO ||
+        !btnHR ||
+        !btnRO
+      ) {
+        return;
+      }
+
+
+      const setStatus = (message) => {
+
+        if (audioStatus) {
+          audioStatus.textContent =
+            message || "";
+        }
+      };
+
+
+      const setButtonState = (
+        button,
+        isPlaying
+      ) => {
+
+        button.classList.toggle(
+          "playing",
+          isPlaying
+        );
+
+        button.setAttribute(
+          "aria-pressed",
+          isPlaying
+            ? "true"
+            : "false"
+        );
+      };
+
+
+      const resetButtons = () => {
+
+        setButtonState(
+          btnHR,
+          false
+        );
+
+        setButtonState(
+          btnRO,
+          false
+        );
+      };
+
+
+      const stopAudio = (audio) => {
+
+        audio.pause();
+
+        try {
+          audio.currentTime = 0;
+        } catch (error) {
+          /* bez dodatne radnje */
+        }
+      };
+
+
+      const playSelectedAudio = (
+        audio,
+        button,
+        otherAudio,
+        label
+      ) => {
+
+        if (!audio.paused) {
+
+          audio.pause();
+
+          setButtonState(
+            button,
+            false
+          );
+
+          setStatus(
+            "Reprodukcija je zaustavljena."
+          );
+
+          return;
+        }
+
+
+        stopAudio(otherAudio);
+
+        resetButtons();
+
+
+        try {
+          audio.currentTime = 0;
+        } catch (error) {
+          /* zvuk se učitava */
+        }
+
+
+        const playPromise =
+          audio.play();
+
+
+        if (
+          playPromise &&
+          typeof playPromise.then ===
+            "function"
+        ) {
+
+          playPromise
+            .then(() => {
+
+              setButtonState(
+                button,
+                true
+              );
+
+              setStatus(
+                "Reproducira se " +
+                label +
+                "."
+              );
+            })
+
+            .catch(() => {
+
+              setButtonState(
+                button,
+                false
+              );
+
+              setStatus(
+                "Zvuk se nije mogao pokrenuti. Pokušajte ponovno."
+              );
+            });
+
+        } else {
+
+          setButtonState(
+            button,
+            true
+          );
+
+          setStatus(
+            "Reproducira se " +
+            label +
+            "."
+          );
+        }
+      };
+
+
+      btnHR.addEventListener(
+        "click",
+        () => {
+
+          playSelectedAudio(
+            audioHR,
+            btnHR,
+            audioRO,
+            "hrvatski izgovor prezimena Tandara"
+          );
+        }
+      );
+
+
+      btnRO.addEventListener(
+        "click",
+        () => {
+
+          playSelectedAudio(
+            audioRO,
+            btnRO,
+            audioHR,
+            "rumunjski izgovor naziva Țândără"
+          );
+        }
+      );
+
+
+      audioHR.addEventListener(
+        "ended",
+        () => {
+
+          resetButtons();
+          setStatus("");
+        }
+      );
+
+
+      audioRO.addEventListener(
+        "ended",
+        () => {
+
+          resetButtons();
+          setStatus("");
+        }
+      );
+
+
+      audioHR.load();
+      audioRO.load();
+
+    })();
+  </script>
 
 </body>
 </html>
