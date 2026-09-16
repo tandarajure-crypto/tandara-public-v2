@@ -86,16 +86,26 @@
     href="../tandara-common/css/subpages-common.css?v=20260916-2"
   >
 
+
   <style>
+
+    /* =========================================================
+       IZGOVOR — PRIKAZ PO UZORU NA STARU STRANICU
+       ========================================================= */
+
     .audio-pronunciation-box {
       margin: 22px 0 30px;
       padding: 20px 24px;
 
-      border: 1px solid rgba(120, 88, 45, 0.25);
+      border:
+        1px solid rgba(120, 88, 45, 0.25);
+
       border-radius: 14px;
 
-      background: rgba(245, 238, 220, 0.75);
+      background:
+        rgba(245, 238, 220, 0.75);
     }
+
 
     .audio-pronunciation-title {
       margin: 0 0 16px !important;
@@ -104,27 +114,37 @@
 
       font-size: 18px !important;
       font-weight: 700;
+
       text-align: left !important;
     }
+
 
     .audio-icon-row {
       display: flex;
       flex-wrap: wrap;
+
       gap: 16px;
+
       align-items: center;
     }
 
+
     .audio-icon-button {
       display: inline-flex;
+
       align-items: center;
-      gap: 12px;
 
-      padding: 9px 18px;
+      gap: 10px;
 
-      border: 1px solid rgba(75, 53, 28, 0.35);
+      padding: 10px 16px;
+
+      border:
+        1px solid rgba(75, 53, 28, 0.35);
+
       border-radius: 999px;
 
       background: #ffffff;
+
       color: #3d2a16;
 
       box-shadow:
@@ -136,6 +156,7 @@
         serif;
 
       font-size: 16px;
+
       font-weight: 700;
 
       cursor: pointer;
@@ -145,6 +166,7 @@
         box-shadow 0.15s ease,
         background 0.15s ease;
     }
+
 
     .audio-icon-button:hover {
       transform:
@@ -157,32 +179,73 @@
         0 5px 12px rgba(0, 0, 0, 0.18);
     }
 
+
     .audio-icon-button:focus-visible {
-      outline: 3px solid #7a5e3a;
+      outline:
+        3px solid #2f6d3b;
+
       outline-offset: 3px;
     }
 
-    .audio-icon-button.playing {
-      border-color: #b78c45;
-      background: #f5e5c3;
+
+    /* ZELENI KRUG KAO NA STAROJ STRANICI */
+
+    .speaker-icon {
+      display: inline-flex;
+
+      width: 42px;
+      height: 42px;
+
+      flex: 0 0 42px;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #2f6d3b;
+
+      box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.18);
     }
 
-    .speaker-icon-image {
+
+    /* postojeći speaker.png iz COMMON repoa */
+
+    .speaker-icon img {
       display: block;
 
-      width: 50px;
-      height: 50px;
-
-      flex: 0 0 50px;
+      width: 25px;
+      height: 25px;
 
       object-fit: contain;
 
-      transition:
-        transform 0.15s ease;
+      /*
+       * Ikonu pretvaramo u bijelu,
+       * kao zvučnik na staroj stranici.
+       */
+      filter:
+        brightness(0)
+        invert(1);
     }
 
+
+    .audio-icon-button.playing {
+      border-color:
+        rgba(56, 110, 43, 0.55);
+
+      background: #e8f4df;
+    }
+
+
     .audio-icon-button.playing
-    .speaker-icon-image {
+    .speaker-icon {
+      background: #24582f;
+
+      box-shadow:
+        0 0 0 4px
+        rgba(47, 109, 59, 0.18);
+
       animation:
         speakerPulse
         1.2s
@@ -190,11 +253,15 @@
         infinite;
     }
 
+
     .audio-label-small {
       font-size: 13px;
+
       font-weight: 500;
+
       opacity: 0.85;
     }
+
 
     .audio-status {
       min-height: 1.4em;
@@ -204,10 +271,13 @@
       color: #4b351c;
 
       font-size: 14px !important;
+
       text-align: left !important;
     }
 
+
     @keyframes speakerPulse {
+
       0% {
         transform: scale(1);
       }
@@ -219,35 +289,47 @@
       100% {
         transform: scale(1);
       }
+
     }
+
 
     @media (max-width: 600px) {
 
       .audio-icon-row {
         flex-direction: column;
+
         align-items: stretch;
       }
 
+
       .audio-icon-button {
         width: 100%;
+
         justify-content: flex-start;
       }
+
     }
+
 
     @media (prefers-reduced-motion: reduce) {
 
       .audio-icon-button,
-      .speaker-icon-image {
+      .speaker-icon {
         animation: none !important;
+
         transition: none !important;
       }
+
     }
+
   </style>
+
 
   <script
     defer
     src="../tandara-common/js/subpages-common.js?v=20260916-1"
   ></script>
+
 </head>
 
 
@@ -372,18 +454,21 @@
 
         <p>
           <strong>Pisanje:</strong> Tandara<br>
-          <strong>Izgovor:</strong> TÀN-da-ra, naglasak na prvom
-          slogu<br>
-          <strong>Fonetske značajke:</strong> tvrdo t, kratki
-          vokali i ravnomjeran ritam.<br>
-          <strong>Povijesni kontekst:</strong> prezime se
-          pojavljuje na dalmatinskom i hercegovačkom području.<br>
-          <strong>Etimologija:</strong> najčešće se povezuje s
-          nazivom <em>tandir</em> – limenom peći korištenom u
-          vrijeme osmanske vladavine. Prezime je moglo nastati
-          po zanimanju izrade ili održavanja limenih peći,
-          po predmetu, odnosno tandiru kao prepoznatljivom
-          objektu, ili po lokalitetu gdje se takva peć koristila.
+
+          <strong>Izgovor:</strong>
+          TÀN-da-ra, naglasak na prvom slogu<br>
+
+          <strong>Fonetske značajke:</strong>
+          tvrdo t, kratki vokali i ravnomjeran ritam.<br>
+
+          <strong>Povijesni kontekst:</strong>
+          prezime se pojavljuje na dalmatinskom i
+          hercegovačkom području.<br>
+
+          <strong>Etimologija:</strong>
+          najčešće se povezuje s nazivom
+          <em>tandir</em> – limenom peći korištenom
+          u vrijeme osmanske vladavine.
         </p>
 
 
@@ -391,23 +476,25 @@
 
         <p>
           <strong>Pisanje:</strong> Țândără<br>
-          <strong>Izgovor:</strong> tsân-DĂ-rə, naglasak na
-          drugom slogu<br>
-          <strong>Fonetske značajke:</strong> početno slovo Ț
-          izgovara se kao „ts”, a vokal ă neutralni je
-          šva-zvuk.<br>
-          <strong>Etimologija:</strong> rumunjski naziv potječe
-          od riječi <em>țândără</em> u značenju treščica, iver
-          ili komadić drveta. Prezime je najvjerojatnije nastalo
-          po zanimanju vezanom uz drvodjelstvo, po osobini osobe
-          koja radi s iverjem ili po lokalnom nazivu koji se
-          odnosi na drvene ostatke.
+
+          <strong>Izgovor:</strong>
+          tsân-DĂ-rə, naglasak na drugom slogu<br>
+
+          <strong>Fonetske značajke:</strong>
+          početno slovo Ț izgovara se kao „ts”,
+          a vokal ă neutralni je šva-zvuk.<br>
+
+          <strong>Etimologija:</strong>
+          rumunjski naziv potječe od riječi
+          <em>țândără</em> u značenju treščica,
+          iver ili komadić drveta.
         </p>
 
 
         <h3>Razlika u pisanju i izgovoru</h3>
 
         <ul>
+
           <li>
             <strong>Pisanje:</strong>
             HR: Tandara / RO: Țândără
@@ -425,19 +512,22 @@
 
           <li>
             <strong>Podrijetlo:</strong>
-            HR: tandir, limena peć / RO: treščica, iver,
-            drvodjelstvo
+            HR: tandir, limena peć /
+            RO: treščica, iver, drvodjelstvo
           </li>
+
         </ul>
 
 
         <h3>Poslušajte izgovor oba oblika</h3>
+
 
         <div class="audio-pronunciation-box">
 
           <p class="audio-pronunciation-title">
             Kliknite na zvučnik i poslušajte izgovor
           </p>
+
 
           <div class="audio-icon-row">
 
@@ -450,18 +540,24 @@
               aria-pressed="false"
             >
 
-              <img
-                class="speaker-icon-image"
-                src="../tandara-common/slike/ikone/speaker.png"
-                alt=""
-                aria-hidden="true"
-              >
+              <span class="speaker-icon">
+
+                <img
+                  src="../tandara-common/slike/ikone/speaker.png?v=20260916-2"
+                  alt=""
+                  aria-hidden="true"
+                >
+
+              </span>
 
               <span>
+
                 Poslušajte hrvatski izgovor<br>
+
                 <span class="audio-label-small">
                   Tandara
                 </span>
+
               </span>
 
             </button>
@@ -475,21 +571,28 @@
               aria-pressed="false"
             >
 
-              <img
-                class="speaker-icon-image"
-                src="../tandara-common/slike/ikone/speaker.png"
-                alt=""
-                aria-hidden="true"
-              >
+              <span class="speaker-icon">
+
+                <img
+                  src="../tandara-common/slike/ikone/speaker.png?v=20260916-2"
+                  alt=""
+                  aria-hidden="true"
+                >
+
+              </span>
 
               <span>
+
                 Poslušajte rumunjski izgovor<br>
+
                 <span class="audio-label-small">
                   Țândără
                 </span>
+
               </span>
 
             </button>
+
 
           </div>
 
@@ -500,11 +603,13 @@
             src="../tandara-common/audio/audio-hr.mp3"
           ></audio>
 
+
           <audio
             id="audioRO"
             preload="auto"
             src="../tandara-common/audio/audio-ro.mp3"
           ></audio>
+
 
           <p
             class="audio-status"
@@ -513,7 +618,9 @@
             aria-live="polite"
           ></p>
 
+
         </div>
+
 
       </section>
 
@@ -531,11 +638,7 @@
           <strong>
             migracija stanovništva iz Transilvanije
           </strong>
-          tijekom 18. i 19. stoljeća. Genealoške baze i raspored
-          prezimena upućuju na to da
-          <strong>Tandara nije autohtono slovačko prezime</strong>,
-          nego je u Slovačku stiglo iz rumunjskog prostora,
-          gdje postoji srodni oblik <strong>Țândără</strong>.
+          tijekom 18. i 19. stoljeća.
         </p>
 
         <p>
@@ -544,18 +647,18 @@
         </p>
 
         <ul>
+
           <li>
-            <strong>Lukáš Tandara</strong> — profesionalni
-            lutkar, glumac i improvizator iz Žiline,
-            Clowndoctors.
+            <strong>Lukáš Tandara</strong> —
+            profesionalni lutkar, glumac i improvizator
+            iz Žiline, Clowndoctors.
           </li>
 
           <li>
-            <strong>Marián Tandara</strong> — nogometaš iz
-            <strong>Žiline</strong>, igrao je za reprezentaciju
-            U21 te nastupa kao desni branič u slovačkoj drugoj
-            ligi.
+            <strong>Marián Tandara</strong> —
+            nogometaš iz Žiline.
           </li>
+
         </ul>
 
 
@@ -570,7 +673,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/lukastandara.jpg"
-                alt="Lukáš Tandara, profesionalni lutkar, glumac i improvizator iz Žiline"
+                alt="Lukáš Tandara"
                 loading="lazy"
                 decoding="async"
               >
@@ -578,8 +681,8 @@
             </div>
 
             <figcaption>
-              Lukáš Tandara – profesionalni lutkar, glumac
-              i improvizator iz Žiline
+              Lukáš Tandara – profesionalni lutkar,
+              glumac i improvizator iz Žiline
             </figcaption>
 
           </figure>
@@ -591,7 +694,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/mariantandara.jpg"
-                alt="Marián Tandara, nogometaš iz Žiline"
+                alt="Marián Tandara"
                 loading="lazy"
                 decoding="async"
               >
@@ -606,41 +709,14 @@
 
         </div>
 
-
-        <p>
-          Ovi primjeri pokazuju da se prezime
-          <strong>Tandara</strong> u Slovačkoj održalo i razvilo
-          u različitim područjima — od kazališta do sporta —
-          ali ne mijenjaju osnovnu činjenicu:
-          <strong>
-            najvjerojatnije je riječ o prezimenu koje je u
-            Slovačku stiglo iz rumunjskog područja
-          </strong>,
-          gdje postoji snažna jezična i povijesna podloga za
-          njegov nastanak.
-        </p>
-
-        <p>
-          Ipak, iako je rumunjsko podrijetlo najvjerojatnije,
-          <strong>ne može se potpuno isključiti</strong>
-          mogućnost da je pojedini hrvatski nositelj prezimena
-          <strong>Tandara</strong> tijekom 18. ili 19. stoljeća
-          doselio na slovačko područje. Hrvatski oblik prezimena
-          ima drukčiju etimologiju i povijesni razvoj, pa bi se
-          takva mogućnost mogla
-          <strong>
-            jasno potvrditi ili isključiti jedino DNA analizom
-          </strong>,
-          usporedbom hrvatskih, slovačkih i rumunjskih genetskih
-          linija.
-        </p>
-
       </section>
 
 
       <section>
 
-        <h2>Australija – podrijetlo i uporaba naziva Tandara</h2>
+        <h2>
+          Australija – podrijetlo i uporaba naziva Tandara
+        </h2>
 
 
         <h3>Podrijetlo naziva Tandara u Australiji</h3>
@@ -648,104 +724,19 @@
         <p>
           Naziv <strong>Tandara</strong> u Australiji smatra se
           nazivom <strong>aboridžinskog podrijetla</strong>,
-          preuzetim iz lokalnih jezika starosjedilaca jugoistočne
-          Australije. U različitim dijalektima riječ se tumači
-          kao <strong>mjesto logora</strong>,
-          <strong>mjesto boravka</strong> ili
-          <strong>mjesto odmora</strong>, a u modernim
-          interpretacijama i kao <strong>mirno mjesto</strong>
-          odnosno <strong>mjesto tišine</strong>.
-        </p>
-
-        <p>
-          Takva uporaba predstavlja primjer načina na koji su
-          europski doseljenici preuzimali aboridžinske riječi
-          i pretvarali ih u nazive stočarskih posjeda, farmi,
-          naselja i drugih lokaliteta.
-        </p>
-
-
-        <h3>Kako je nastao naziv Tandara u Victoriji</h3>
-
-        <p>
-          Prema ovom prikazu, naziv se u Victoriji pojavljuje
-          tijekom <strong>1840-ih godina</strong>, kada je
-          europski doseljenik <strong>John Aitken</strong>
-          veliki stočarski posjed
-          (<em>pastoralni run</em>) nazvao
-          <strong>Tandara</strong>, prema riječi koju je čuo
-          od lokalnih Aboridžina.
-        </p>
-
-        <ol>
-          <li>aboridžinska riječ,</li>
-
-          <li>
-            pastoralni posjed <strong>Tandara</strong>
-            tijekom 1840-ih,
-          </li>
-
-          <li>naziv lokaliteta,</li>
-
-          <li>
-            naziv različitih objekata, ustanova i poslovnih
-            subjekata.
-          </li>
-        </ol>
-
-        <p>
-          Ovo australsko podrijetlo naziva
-          <strong>
-            nije povezano s hrvatskim prezimenom Tandara
-          </strong>;
-          riječ je o zasebnom nastanku i razvoju istog ili vrlo
-          sličnog naziva.
-        </p>
-
-
-        <h3>Gdje se naziv Tandara danas koristi</h3>
-
-        <h4>1. Službeni lokalitet</h4>
-
-        <p>
-          <strong>Tandara, Victoria</strong> naziv je ruralnog
-          lokaliteta u području Shire of Loddon.
-        </p>
-
-
-        <h4>2. Povijesni stočarski posjed</h4>
-
-        <p>
-          Naziv <strong>Tandara Station</strong> pojavljuje se
-          u povijesnim zapisima vezanim uz stočarske posjede
-          iz 19. stoljeća.
-        </p>
-
-
-        <h4>3. Farme, vinogradi, turistički i drugi objekti</h4>
-
-        <p>
-          Naziv Tandara koristi se i za različite farme,
-          vinograde, ruralne smještaje, zdravstvene i zajedničke
-          centre te projekte povezane s prirodom i ruralnim
-          okruženjem.
-        </p>
-
-
-        <h4>4. Simboličko značenje</h4>
-
-        <p>
-          U modernoj uporabi naziv se često povezuje s mirom,
-          prirodom, vodom, harmonijom i ruralnim ambijentom.
+          preuzetim iz lokalnih jezika starosjedilaca
+          jugoistočne Australije.
         </p>
 
 
         <h3>Primjeri uporabe naziva Tandara u Australiji</h3>
 
+
         <div
           class="australia-tandara-gallery"
           aria-label="Primjeri uporabe naziva Tandara u Australiji"
         >
+
 
           <figure class="australia-tandara-item">
 
@@ -753,7 +744,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/tandara-dental.jpg"
-                alt="Tandara Dental Centre u Australiji"
+                alt="Tandara Dental Centre"
                 loading="lazy"
                 decoding="async"
               >
@@ -761,8 +752,8 @@
             </div>
 
             <figcaption>
-              Tandara Dental Centre – primjer uporabe naziva
-              Tandara u Australiji
+              Tandara Dental Centre – primjer uporabe
+              naziva Tandara u Australiji
             </figcaption>
 
           </figure>
@@ -774,7 +765,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/hotel-motel.-tandara.jpg"
-                alt="Tandara Hotel Motel u Australiji"
+                alt="Tandara Hotel Motel"
                 loading="lazy"
                 decoding="async"
               >
@@ -795,7 +786,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/tandara-hotel-australija.jpg"
-                alt="Tandara Motel Hotel u Australiji"
+                alt="Tandara Motel Hotel"
                 loading="lazy"
                 decoding="async"
               >
@@ -803,7 +794,8 @@
             </div>
 
             <figcaption>
-              Tandara Motel Hotel – pročelje objekta u Australiji
+              Tandara Motel Hotel – pročelje objekta
+              u Australiji
             </figcaption>
 
           </figure>
@@ -815,7 +807,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/tandaramotorin.jpg"
-                alt="Reklamni prospekt Tandara Motor Inn, Triabunna, Tasmania"
+                alt="Tandara Motor Inn"
                 loading="lazy"
                 decoding="async"
               >
@@ -829,18 +821,9 @@
 
           </figure>
 
+
         </div>
 
-
-        <p>
-          <strong>Sažetak:</strong> naziv Tandara u australskom
-          kontekstu tumači se kao naziv aboridžinskog podrijetla
-          povezan s mjestom boravka, odmora ili mira. Tijekom
-          19. stoljeća preuzet je kao naziv stočarskog posjeda,
-          a poslije se proširio na lokalitet i različite ruralne,
-          turističke, zdravstvene i poslovne objekte. To je
-          podrijetlo neovisno o hrvatskom prezimenu Tandara.
-        </p>
 
       </section>
 
@@ -851,12 +834,9 @@
 
         <p>
           U Brazilu se <strong>Tandara</strong> koristi kao
-          žensko osobno ime, a njegovu međunarodnu prepoznatljivost
-          dodatno je povećala poznata brazilska odbojkašica
-          <strong>Tandara Caixeta</strong>. Iako ne postoji jedno
-          službeno objašnjenje zbog čega je upravo ovo ime postalo
-          popularno, njegova fonetska i estetska obilježja vrlo su
-          vjerojatno pridonijela njegovoj privlačnosti.
+          žensko osobno ime, a njegovu međunarodnu
+          prepoznatljivost dodatno je povećala brazilska
+          odbojkašica <strong>Tandara Caixeta</strong>.
         </p>
 
 
@@ -865,13 +845,14 @@
           aria-label="Tandara Caixeta – fotografije"
         >
 
+
           <figure class="australia-tandara-item">
 
             <div class="australia-tandara-image">
 
               <img
                 src="../tandara-common/slike/zanimljivosti/tandara-caixeta2.jpg"
-                alt="Tandara Caixeta, brazilska odbojkašica i olimpijska pobjednica"
+                alt="Tandara Caixeta"
                 loading="lazy"
                 decoding="async"
               >
@@ -879,8 +860,8 @@
             </div>
 
             <figcaption>
-              Tandara Caixeta – brazilska odbojkašica i
-              olimpijska pobjednica
+              Tandara Caixeta – brazilska odbojkašica
+              i olimpijska pobjednica
             </figcaption>
 
           </figure>
@@ -892,7 +873,7 @@
 
               <img
                 src="../tandara-common/slike/zanimljivosti/tandara-caixeta.jpg"
-                alt="Tandara Caixeta – prikaz njezine odbojkaške karijere"
+                alt="Tandara Caixeta"
                 loading="lazy"
                 decoding="async"
               >
@@ -905,41 +886,9 @@
 
           </figure>
 
+
         </div>
 
-
-        <p>
-          U brazilskom kontekstu zanimljiva je i zvučnost
-          osobnog imena Tandara. Tri jasna sloga daju mu
-          ritmičan i lako izgovorljiv oblik, što može
-          pridonijeti njegovoj prepoznatljivosti i izvan
-          portugalskoga jezičnog prostora. To je jezično
-          opažanje, a ne dokaz o tome zašto je pojedina
-          obitelj odabrala upravo to ime.
-        </p>
-
-        <p>
-          Naziv Tandara posjeduje niz osobina koje se često
-          smatraju poželjnima kod osobnih imena:
-        </p>
-
-        <ul>
-          <li>melodičnost i prirodan ritam</li>
-          <li>iznimnu zvučnost i lakoću izgovora</li>
-          <li>harmoničnu slogovnu strukturu</li>
-          <li>dinamičnost i osjećaj pokreta</li>
-          <li>jednostavno pamćenje</li>
-          <li>prepoznatljivost među drugim imenima</li>
-          <li>međunarodnu izgovorljivost</li>
-          <li>originalnost i rijetkost</li>
-          <li>moderan, ali bezvremenski karakter</li>
-          <li>fonetsku ravnotežu i sklad</li>
-          <li>topao i ugodan završni zvuk</li>
-          <li>eleganciju bez složenosti</li>
-          <li>pozitivan prvi dojam pri izgovoru</li>
-          <li>jednostavnost zapisivanja na različitim jezicima</li>
-          <li>univerzalnost u različitim kulturama.</li>
-        </ul>
 
       </section>
 
@@ -949,14 +898,9 @@
         <h2>Otvorena pitanja</h2>
 
         <p>
-          Najzanimljivija otvorena pitanja odnose se na to jesu
-          li pojedine europske pojave prezimena međusobno
-          povezane ili su nastale neovisno, te koliko su
-          pouzdana lokalna tumačenja naziva u Rumunjskoj,
-          Slovačkoj i Australiji. Dok se ne pronađu čvršći
-          dokumenti, takve se usporedbe na ovoj stranici
-          predstavljaju kao kulturne i jezične zanimljivosti,
-          a ne kao dokaz rodoslovne veze.
+          Najzanimljivija otvorena pitanja odnose se na to
+          jesu li pojedine europske pojave prezimena međusobno
+          povezane ili su nastale neovisno.
         </p>
 
       </section>
@@ -968,12 +912,10 @@
 
         <p>
           Ako imate dokument, fotografiju, publikaciju ili
-          pouzdanu informaciju koja se odnosi upravo na neki
-          od ovdje prikazanih međunarodnih primjera naziva
-          Tandara, možete je poslati preko stranice
+          pouzdanu informaciju koja se odnosi na neki od ovdje
+          prikazanih primjera naziva Tandara, možete je poslati
+          preko stranice
           <a href="kontakti.html">Kontakt i suradnja</a>.
-          Takvi prilozi mogu pomoći da se pojedino tumačenje
-          potvrdi, precizira ili odbaci.
         </p>
 
       </section>
@@ -985,7 +927,9 @@
 
 
   <script>
+
     (() => {
+
       "use strict";
 
 
@@ -1015,19 +959,22 @@
       }
 
 
-      const setStatus = (message) => {
+      function setStatus(message) {
 
         if (audioStatus) {
+
           audioStatus.textContent =
             message || "";
+
         }
-      };
+
+      }
 
 
-      const setButtonState = (
+      function setButtonState(
         button,
         isPlaying
-      ) => {
+      ) {
 
         button.classList.toggle(
           "playing",
@@ -1040,10 +987,11 @@
             ? "true"
             : "false"
         );
-      };
+
+      }
 
 
-      const resetButtons = () => {
+      function resetButtons() {
 
         setButtonState(
           btnHR,
@@ -1054,27 +1002,33 @@
           btnRO,
           false
         );
-      };
+
+      }
 
 
-      const stopAudio = (audio) => {
+      function stopAudio(audio) {
 
         audio.pause();
 
         try {
+
           audio.currentTime = 0;
+
         } catch (error) {
+
           /* bez dodatne radnje */
+
         }
-      };
+
+      }
 
 
-      const playSelectedAudio = (
+      function playSelectedAudio(
         audio,
         button,
         otherAudio,
         label
-      ) => {
+      ) {
 
         if (!audio.paused) {
 
@@ -1090,6 +1044,7 @@
           );
 
           return;
+
         }
 
 
@@ -1099,9 +1054,13 @@
 
 
         try {
+
           audio.currentTime = 0;
+
         } catch (error) {
+
           /* zvuk se učitava */
+
         }
 
 
@@ -1116,7 +1075,8 @@
         ) {
 
           playPromise
-            .then(() => {
+
+            .then(function () {
 
               setButtonState(
                 button,
@@ -1128,9 +1088,10 @@
                 label +
                 "."
               );
+
             })
 
-            .catch(() => {
+            .catch(function () {
 
               setButtonState(
                 button,
@@ -1138,29 +1099,19 @@
               );
 
               setStatus(
-                "Zvuk se nije mogao pokrenuti. Pokušajte ponovno."
+                "Zvuk se nije mogao pokrenuti."
               );
+
             });
 
-        } else {
-
-          setButtonState(
-            button,
-            true
-          );
-
-          setStatus(
-            "Reproducira se " +
-            label +
-            "."
-          );
         }
-      };
+
+      }
 
 
       btnHR.addEventListener(
         "click",
-        () => {
+        function () {
 
           playSelectedAudio(
             audioHR,
@@ -1168,13 +1119,14 @@
             audioRO,
             "hrvatski izgovor prezimena Tandara"
           );
+
         }
       );
 
 
       btnRO.addEventListener(
         "click",
-        () => {
+        function () {
 
           playSelectedAudio(
             audioRO,
@@ -1182,35 +1134,44 @@
             audioHR,
             "rumunjski izgovor naziva Țândără"
           );
+
         }
       );
 
 
       audioHR.addEventListener(
         "ended",
-        () => {
+        function () {
 
           resetButtons();
+
           setStatus("");
+
         }
       );
 
 
       audioRO.addEventListener(
         "ended",
-        () => {
+        function () {
 
           resetButtons();
+
           setStatus("");
+
         }
       );
 
 
       audioHR.load();
+
       audioRO.load();
 
+
     })();
+
   </script>
+
 
 </body>
 </html>
