@@ -528,224 +528,209 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin="anonymous"></script>
 
 <script>
-(() => {
-"use strict";
+window.TandaraMigrationConfig = {
+  maps: [
+    {
+      key: "ricice",
+      id: "ricice-map",
+      center: [43.51347, 17.11103],
+      zoom: 11,
+      markers: [
+        {
+          coordinates: [43.51347, 17.11103],
+          popup: "Ričice",
+          tooltip: {
+            content: "Ričice",
+            options: {
+              permanent: true,
+              direction: "bottom",
+              offset: [0, 10],
+              opacity: .95,
+              className: "ricice-label-no-arrow"
+            }
+          }
+        },
+        [43.543333, 17.125556, "Tandare, Zavelim"],
+        [43.8249858, 17.0076892, "Livno"]
+      ]
+    },
 
-if(!window.L)return;
+    {
+      key: "croatia",
+      id: "tandara-croatia-map",
+      center: [45.25, 16.65],
+      zoom: 7,
+      fitBoundsPadding: .08,
+      markers: [
+        [45.39806,17.92583,"Bektež near Kutjevo (2 families, 3 members)"],
+        [45.89864,16.84892,"Bjelovar (5 families, 13 members)"],
+        [46.20694,16.91694,"Drnje (1 family, 2 members)"],
+        [45.80583,16.24417,"Dugo Selo (1 family, 2 members)"],
+        [45.30833,18.41056,"Đakovo (7 families, 22 members)"],
+        [44.13598,15.63423,"Gornji Karin near Obrovac (1 family, 1 member)"],
+        [43.44667,17.21667,"Imotski (1 family, 3 members)"],
+        [46.22306,16.12028,"Ivanec (1 family, 3 members)"],
+        [43.51420,16.51470,"Kamen near Split (1 family, 3 members)"],
+        [43.55357,16.34831,"Kaštel Stari (2 families, 5 members)"],
+        [45.91837,16.78667,"Klokočevac (3 families, 11 members)"],
+        [45.81484,16.26053,"Kozinščak near Dugo Selo (1 family, 5 members)"],
+        [46.02194,16.54250,"Križevci (1 family, 4 members)"],
+        [45.42611,17.88222,"Kutjevo (2 families, 7 members)"],
+        [45.33250,18.84111,"Nuštar (1 family, 1 member)"],
+        [43.48668,16.55013,"Podstrana (3 families, 11 members)"],
+        [45.93583,16.78333,"Predavac (9 families, 25 members)"],
+        [45.02083,14.62889,"Punat (1 family, 2 members)"],
+        [43.51347,17.11103,"Ričice (8 families, 35 members)"],
+        [45.32706,14.44218,"Rijeka (1 family, 1 member)"],
+        [45.83111,16.11639,"Sesvete (1 family, 3 members)"],
+        [45.48722,16.37611,"Sisak (2 families, 5 members)"],
+        [45.70333,17.70278,"Slatina (1 family, 1 member)"],
+        [45.16028,18.01556,"Slavonski Brod (1 family, 1 member)"],
+        [43.50813,16.44019,"Split (11 families, 35 members)"],
+        [44.71998,14.89672,"Stinica near Senj (1 family, 2 members)"],
+        [43.50250,16.52222,"Stobreč (5 families, 20 members)"],
+        [45.22592,18.42881,"Strizivojna (2 families, 5 members)"],
+        [45.28833,18.80472,"Vinkovci (1 family, 4 members)"],
+        [45.21024,18.40528,"Vrpolje (1 family, 4 members)"],
+        [45.35161,19.00225,"Vukovar (2 families, 5 members)"],
+        [45.81501,15.98192,"Zagreb (24 families, 73 members)"]
+      ]
+    },
 
-const tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-const attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-
-const createMap=(id,center,zoom)=>{
-const element=document.getElementById(id);
-if(!element)return null;
-const map=L.map(element).setView(center,zoom);
-L.tileLayer(tiles,{attribution}).addTo(map);
-return map;
+    {
+      key: "world",
+      id: "tandara-world-map",
+      center: [45, 12],
+      zoom: 3,
+      fitBoundsPadding: .10,
+      markers: [
+        [
+          43.543333,
+          17.125556,
+          "<b>Tandare, Zavelim — Bosnia and Herzegovina</b><br>" +
+          "2 recorded family units; at least 5 explicitly " +
+          "located members."
+        ],
+        [
+          43.4728,
+          17.3262,
+          "<b>Posušje — Bosnia and Herzegovina</b><br>" +
+          "2 recorded families + 1 separately located member; " +
+          "at least 3 explicitly located people. The complete " +
+          "number has not been established."
+        ],
+        [
+          43.8563,
+          18.4131,
+          "<b>Sarajevo — Bosnia and Herzegovina</b><br>" +
+          "2 recorded family units; 6 named members in the " +
+          "available records."
+        ],
+        [
+          43.8249858,
+          17.0076892,
+          "<b>Livno — Bosnia and Herzegovina</b><br>" +
+          "The available data confirm that descendants of the " +
+          "family live in the Livno area today; the number of " +
+          "families and members has not been established."
+        ],
+        [
+          46.3592,
+          15.1103,
+          "<b>Velenje — Slovenia</b><br>" +
+          "2 recorded families; 8 named members in the " +
+          "available records."
+        ],
+        [
+          48.1351,
+          11.5820,
+          "<b>Munich — Germany</b><br>" +
+          "1 family; 2 members explicitly located in Munich."
+        ],
+        [
+          52.5200,
+          13.4050,
+          "<b>Berlin — Germany</b><br>" +
+          "1 explicitly located family member."
+        ],
+        [
+          52.0302,
+          8.5325,
+          "<b>Bielefeld — Germany</b><br>" +
+          "2 recorded families; 7 named members in the " +
+          "available records."
+        ],
+        [
+          51.1657,
+          10.4515,
+          "<b>Germany — exact location not specified</b><br>" +
+          "6 recorded families + 1 separately listed member; " +
+          "25 named people. The text also mentions additional " +
+          "branches in Germany without sufficient information " +
+          "for reliable counting."
+        ],
+        [
+          48.2082,
+          16.3738,
+          "<b>Vienna — Austria</b><br>" +
+          "1 recorded family + 1 separately located member; " +
+          "5 named people in total."
+        ],
+        [
+          47.5162,
+          14.5501,
+          "<b>Austria — additional location not specified</b><br>" +
+          "The genealogical text mentions at least 1 additional " +
+          "branch in Austria; the number of members has not " +
+          "been established."
+        ],
+        [
+          46.8182,
+          8.2275,
+          "<b>Switzerland — location not specified</b><br>" +
+          "1 recorded family; 4 named members."
+        ],
+        [
+          51.9194,
+          19.1451,
+          "<b>Poland — location not specified</b><br>" +
+          "1 explicitly listed member of the family " +
+          "(Nikola Tandara)."
+        ],
+        [
+          51.5074,
+          -0.1278,
+          "<b>London — United Kingdom</b><br>" +
+          "1 recorded family; 4 named members."
+        ],
+        [
+          56.1304,
+          -106.3468,
+          "<b>Canada — location not specified</b><br>" +
+          "1 recorded family; 4 named members."
+        ],
+        [
+          39.8283,
+          -98.5795,
+          "<b>United States of America — location not specified</b><br>" +
+          "1 recorded family; 4 named members."
+        ],
+        [
+          -25.2744,
+          133.7751,
+          "<b>Australia — location not specified</b><br>" +
+          "Australia is listed as a destination of emigration " +
+          "for members of the Croatian Tandara family; the " +
+          "number of families and members has not been " +
+          "established from the available HTML data."
+        ]
+      ]
+    }
+  ]
 };
-
-const riciceMap=createMap("ricice-map",[43.51347,17.11103],11);
-
-if(riciceMap){
-L.marker([43.51347,17.11103])
-.addTo(riciceMap)
-.bindPopup("Ričice")
-.bindTooltip("Ričice",{
-permanent:true,
-direction:"bottom",
-offset:[0,10],
-opacity:.95,
-className:"ricice-label-no-arrow"
-});
-
-L.marker([43.543333,17.125556])
-.addTo(riciceMap)
-.bindPopup("Tandare, Zavelim");
-
-L.marker([43.8249858,17.0076892])
-.addTo(riciceMap)
-.bindPopup("Livno");
-}
-
-const croatiaMap=createMap("tandara-croatia-map",[45.25,16.65],7);
-
-if(croatiaMap){
-const croatiaData=[
-[45.39806,17.92583,"Bektež near Kutjevo (2 families, 3 members)"],
-[45.89864,16.84892,"Bjelovar (5 families, 13 members)"],
-[46.20694,16.91694,"Drnje (1 family, 2 members)"],
-[45.80583,16.24417,"Dugo Selo (1 family, 2 members)"],
-[45.30833,18.41056,"Đakovo (7 families, 22 members)"],
-[44.13598,15.63423,"Gornji Karin near Obrovac (1 family, 1 member)"],
-[43.44667,17.21667,"Imotski (1 family, 3 members)"],
-[46.22306,16.12028,"Ivanec (1 family, 3 members)"],
-[43.51420,16.51470,"Kamen near Split (1 family, 3 members)"],
-[43.55357,16.34831,"Kaštel Stari (2 families, 5 members)"],
-[45.91837,16.78667,"Klokočevac (3 families, 11 members)"],
-[45.81484,16.26053,"Kozinščak near Dugo Selo (1 family, 5 members)"],
-[46.02194,16.54250,"Križevci (1 family, 4 members)"],
-[45.42611,17.88222,"Kutjevo (2 families, 7 members)"],
-[45.33250,18.84111,"Nuštar (1 family, 1 member)"],
-[43.48668,16.55013,"Podstrana (3 families, 11 members)"],
-[45.93583,16.78333,"Predavac (9 families, 25 members)"],
-[45.02083,14.62889,"Punat (1 family, 2 members)"],
-[43.51347,17.11103,"Ričice (8 families, 35 members)"],
-[45.32706,14.44218,"Rijeka (1 family, 1 member)"],
-[45.83111,16.11639,"Sesvete (1 family, 3 members)"],
-[45.48722,16.37611,"Sisak (2 families, 5 members)"],
-[45.70333,17.70278,"Slatina (1 family, 1 member)"],
-[45.16028,18.01556,"Slavonski Brod (1 family, 1 member)"],
-[43.50813,16.44019,"Split (11 families, 35 members)"],
-[44.71998,14.89672,"Stinica near Senj (1 family, 2 members)"],
-[43.50250,16.52222,"Stobreč (5 families, 20 members)"],
-[45.22592,18.42881,"Strizivojna (2 families, 5 members)"],
-[45.28833,18.80472,"Vinkovci (1 family, 4 members)"],
-[45.21024,18.40528,"Vrpolje (1 family, 4 members)"],
-[45.35161,19.00225,"Vukovar (2 families, 5 members)"],
-[45.81501,15.98192,"Zagreb (24 families, 73 members)"]
-];
-
-const markers=croatiaData.map(([lat,lng,popup])=>
-L.marker([lat,lng]).bindPopup(popup));
-
-const group=L.featureGroup(markers).addTo(croatiaMap);
-croatiaMap.fitBounds(group.getBounds().pad(.08));
-}
-
-const worldMap=createMap("tandara-world-map",[45,12],3);
-
-if(worldMap){
-const worldData=[
-[
-43.543333,
-17.125556,
-"<b>Tandare, Zavelim — Bosnia and Herzegovina</b><br>"+
-"2 recorded family units; at least 5 explicitly "+
-"located members."
-],
-[
-43.4728,
-17.3262,
-"<b>Posušje — Bosnia and Herzegovina</b><br>"+
-"2 recorded families + 1 separately located member; "+
-"at least 3 explicitly located people. The complete "+
-"number has not been established."
-],
-[
-43.8563,
-18.4131,
-"<b>Sarajevo — Bosnia and Herzegovina</b><br>"+
-"2 recorded family units; 6 named members in the "+
-"available records."
-],
-[
-43.8249858,
-17.0076892,
-"<b>Livno — Bosnia and Herzegovina</b><br>"+
-"The available data confirm that descendants of the "+
-"family live in the Livno area today; the number of "+
-"families and members has not been established."
-],
-[
-46.3592,
-15.1103,
-"<b>Velenje — Slovenia</b><br>"+
-"2 recorded families; 8 named members in the "+
-"available records."
-],
-[
-48.1351,
-11.5820,
-"<b>Munich — Germany</b><br>"+
-"1 family; 2 members explicitly located in Munich."
-],
-[
-52.5200,
-13.4050,
-"<b>Berlin — Germany</b><br>"+
-"1 explicitly located family member."
-],
-[
-52.0302,
-8.5325,
-"<b>Bielefeld — Germany</b><br>"+
-"2 recorded families; 7 named members in the "+
-"available records."
-],
-[
-51.1657,
-10.4515,
-"<b>Germany — exact location not specified</b><br>"+
-"6 recorded families + 1 separately listed member; "+
-"25 named people. The text also mentions additional "+
-"branches in Germany without sufficient information "+
-"for reliable counting."
-],
-[
-48.2082,
-16.3738,
-"<b>Vienna — Austria</b><br>"+
-"1 recorded family + 1 separately located member; "+
-"5 named people in total."
-],
-[
-47.5162,
-14.5501,
-"<b>Austria — additional location not specified</b><br>"+
-"The genealogical text mentions at least 1 additional "+
-"branch in Austria; the number of members has not "+
-"been established."
-],
-[
-46.8182,
-8.2275,
-"<b>Switzerland — location not specified</b><br>"+
-"1 recorded family; 4 named members."
-],
-[
-51.9194,
-19.1451,
-"<b>Poland — location not specified</b><br>"+
-"1 explicitly listed member of the family "+
-"(Nikola Tandara)."
-],
-[
-51.5074,
--0.1278,
-"<b>London — United Kingdom</b><br>"+
-"1 recorded family; 4 named members."
-],
-[
-56.1304,
--106.3468,
-"<b>Canada — location not specified</b><br>"+
-"1 recorded family; 4 named members."
-],
-[
-39.8283,
--98.5795,
-"<b>United States of America — location not specified</b><br>"+
-"1 recorded family; 4 named members."
-],
-[
--25.2744,
-133.7751,
-"<b>Australia — location not specified</b><br>"+
-"Australia is listed as a destination of emigration "+
-"for members of the Croatian Tandara family; the "+
-"number of families and members has not been "+
-"established from the available HTML data."
-]
-];
-
-const markers=worldData.map(([lat,lng,popup])=>
-L.marker([lat,lng]).bindPopup(popup));
-
-const group=L.featureGroup(markers).addTo(worldMap);
-worldMap.fitBounds(group.getBounds().pad(.10));
-}
-})();
 </script>
+
+<script src="../tandara-common/js/migration-map.js?v=20260917-1"></script>
 
 </body>
 </html>
