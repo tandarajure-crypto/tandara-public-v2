@@ -1,785 +1,679 @@
 <!DOCTYPE html>
 <html lang="hr">
-
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex,nofollow,noarchive">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+<title>Kontakt i suradnja | TANDARA-PREZIME</title>
 
-  <meta
-    name="referrer"
-    content="strict-origin-when-cross-origin"
-  >
+<meta name="description" content="Kontaktirajte autora projekta TANDARA-PREZIME radi suradnje, razmjene podataka, dokumenata, fotografija i obiteljskih zapisa.">
 
-  <meta
-    name="robots"
-    content="noindex,nofollow,noarchive"
-  >
+<link rel="canonical" href="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html">
+<link rel="alternate" hreflang="hr" href="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html">
+<link rel="alternate" hreflang="en" href="https://tandarajure-crypto.github.io/tandara-public-v2/contacts.html">
+<link rel="alternate" hreflang="x-default" href="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html">
 
-  <title>
-    Kontakt i suradnja | TANDARA-PREZIME
-  </title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kontakt i suradnja | TANDARA-PREZIME">
+<meta property="og:description" content="Kontaktirajte autora projekta TANDARA-PREZIME radi suradnje, razmjene podataka, dokumenata, fotografija i obiteljskih zapisa.">
+<meta property="og:url" content="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html">
+<meta property="og:image" content="https://tandarajure-crypto.github.io/tandara-common/slike/common-foto/jure.webp">
+<meta name="twitter:card" content="summary_large_image">
 
-  <meta
-    name="description"
-    content="Kontaktirajte autora projekta TANDARA-PREZIME radi suradnje, razmjene podataka, dokumenata, fotografija i obiteljskih zapisa."
-  >
+<link rel="stylesheet" href="../tandara-common/css/subpages-common.css?v=20260916-2">
 
-  <link
-    rel="canonical"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html"
-  >
+<style>
+.archive-contact-form{
+display:grid;
+gap:18px;
+width:100%;
+margin-top:20px;
+}
 
-  <link
-    rel="alternate"
-    hreflang="hr"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html"
-  >
+.form-row{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+}
 
-  <link
-    rel="alternate"
-    hreflang="en"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/contacts.html"
-  >
+.archive-contact-form label,
+.archive-contact-form legend{
+color:var(--tandara-text);
+font-weight:700;
+}
 
-  <link
-    rel="alternate"
-    hreflang="x-default"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html"
-  >
+.archive-contact-form input,
+.archive-contact-form select,
+.archive-contact-form textarea{
+width:100%;
+margin-top:6px;
+padding:11px 12px;
+font:inherit;
+color:var(--tandara-text);
+background:#fffaf2;
+border:1px solid rgba(80,60,35,.38);
+border-radius:8px;
+}
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+.archive-contact-form textarea{
+min-height:180px;
+resize:vertical;
+}
 
-  <meta
-    property="og:title"
-    content="Kontakt i suradnja | TANDARA-PREZIME"
-  >
+.archive-contact-form input:focus,
+.archive-contact-form select:focus,
+.archive-contact-form textarea:focus{
+outline:2px solid var(--tandara-gold);
+outline-offset:2px;
+}
 
-  <meta
-    property="og:description"
-    content="Kontaktirajte autora projekta TANDARA-PREZIME radi suradnje, razmjene podataka, dokumenata, fotografija i obiteljskih zapisa."
-  >
+.required-choice{
+margin:0;
+padding:16px 18px;
+border:1px solid rgba(80,60,35,.28);
+border-radius:10px;
+}
 
-  <meta
-    property="og:url"
-    content="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html"
-  >
+.required-choice legend{
+padding:0 6px;
+}
 
-  <meta
-    property="og:image"
-    content="https://tandarajure-crypto.github.io/tandara-common/slike/common-foto/jure.webp"
-  >
+.checkbox-line{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-top:12px;
+font-weight:400;
+}
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+.checkbox-line input{
+width:auto;
+margin:4px 0 0;
+flex:0 0 auto;
+}
 
-  <link
-    rel="stylesheet"
-    href="../tandara-common/css/subpages-common.css?v=20260916-2"
-  >
+.form-required-notice{
+padding:14px 16px;
+background:rgba(212,175,55,.12);
+border:1px solid rgba(150,110,30,.35);
+border-radius:10px;
+}
 
-  <style>
-    .archive-contact-form {
-      display: grid;
-      gap: 18px;
-      width: 100%;
-      margin-top: 20px;
-    }
+.form-note{
+font-size:15px!important;
+}
 
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
+.archive-contact-form button{
+width:fit-content;
+padding:12px 22px;
+font:inherit;
+font-weight:700;
+color:#fff;
+background:#5e4930;
+border:0;
+border-radius:8px;
+cursor:pointer;
+}
 
-    .archive-contact-form label,
-    .archive-contact-form legend {
-      color: var(--tandara-text);
-      font-weight: 700;
-    }
+.archive-contact-form button:hover,
+.archive-contact-form button:focus-visible{
+background:#7a5e3a;
+}
 
-    .archive-contact-form input,
-    .archive-contact-form select,
-    .archive-contact-form textarea {
-      width: 100%;
-      margin-top: 6px;
-      padding: 11px 12px;
+.form-success{
+margin:16px 0;
+padding:14px 16px;
+border:1px solid #65875a;
+border-radius:10px;
+background:#edf7e9;
+}
 
-      font: inherit;
-      color: var(--tandara-text);
+.contact-honeypot{
+position:absolute;
+left:-9999px;
+width:1px;
+height:1px;
+overflow:hidden;
+}
 
-      background: #fffaf2;
+@media(max-width:700px){
+.form-row{
+grid-template-columns:1fr;
+}
 
-      border: 1px solid rgba(80, 60, 35, 0.38);
-      border-radius: 8px;
-    }
+.archive-contact-form button{
+width:100%;
+}
+}
+</style>
 
-    .archive-contact-form textarea {
-      min-height: 180px;
-      resize: vertical;
-    }
-
-    .archive-contact-form input:focus,
-    .archive-contact-form select:focus,
-    .archive-contact-form textarea:focus {
-      outline: 2px solid var(--tandara-gold);
-      outline-offset: 2px;
-    }
-
-    .required-choice {
-      margin: 0;
-      padding: 16px 18px;
-
-      border: 1px solid rgba(80, 60, 35, 0.28);
-      border-radius: 10px;
-    }
-
-    .required-choice legend {
-      padding: 0 6px;
-    }
-
-    .checkbox-line {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-
-      margin-top: 12px;
-
-      font-weight: 400;
-    }
-
-    .checkbox-line input {
-      width: auto;
-      margin: 4px 0 0;
-      flex: 0 0 auto;
-    }
-
-    .form-required-notice {
-      padding: 14px 16px;
-
-      background: rgba(212, 175, 55, 0.12);
-
-      border: 1px solid rgba(150, 110, 30, 0.35);
-      border-radius: 10px;
-    }
-
-    .form-note {
-      font-size: 15px !important;
-    }
-
-    .archive-contact-form button {
-      width: fit-content;
-
-      padding: 12px 22px;
-
-      font: inherit;
-      font-weight: 700;
-
-      color: #ffffff;
-      background: #5e4930;
-
-      border: 0;
-      border-radius: 8px;
-
-      cursor: pointer;
-    }
-
-    .archive-contact-form button:hover,
-    .archive-contact-form button:focus-visible {
-      background: #7a5e3a;
-    }
-
-    .form-success {
-      margin: 16px 0;
-      padding: 14px 16px;
-
-      border: 1px solid #65875a;
-      border-radius: 10px;
-
-      background: #edf7e9;
-    }
-
-    .contact-honeypot {
-      position: absolute;
-      left: -9999px;
-
-      width: 1px;
-      height: 1px;
-
-      overflow: hidden;
-    }
-
-    @media (max-width: 700px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .archive-contact-form button {
-        width: 100%;
-      }
-    }
-  </style>
-
-  <script
-    defer
-    src="../tandara-common/js/subpages-common.js?v=20260916-1"
-  ></script>
+<script defer src="../tandara-common/js/site-common.js?v=20260917-1"></script>
 </head>
 
-
 <body data-site-root="./">
-
-  <main class="content-page">
-
-    <article class="content-card">
-
-      <h1>Kontakt i suradnja</h1>
-
-
-      <section id="uvod">
-
-        <h2>Centar za suradnju Digitalnog arhiva roda Tandara</h2>
-
-        <p>
-          Ako nosite prezime <strong>Tandara</strong>,
-          potječete iz roda Tandara ili istražujete ovu obitelj,
-          ovdje možete poslati podatke, dopune, fotografije,
-          dokumente, pitanja ili prijedloge za
-          <strong>Digitalni arhiv roda Tandara</strong>.
-        </p>
-
-        <p>
-          Ovdje možete prijaviti i pogrešan ili zastario podatak
-          te zatražiti njegovu provjeru, ispravak, zamjenu ili
-          uklanjanje.
-        </p>
-
-      </section>
-
-
-      <section id="kontakt-obrazac">
-
-        <h2>Kontakt obrazac</h2>
-
-        <p>
-          Poruku možete poslati izravno preko obrasca.
-          Molimo unesite dovoljno podataka da se Vaš upit može
-          povezati s odgovarajućom osobom, obitelji ili granom roda.
-        </p>
-
-        <div class="form-required-notice" role="note">
-          <strong>Važna napomena:</strong><br>
-          Polja označena zvjezdicom obavezna su.
-          Za dopunu ili ispravak rodoslovlja navedite što točnije
-          osobu, granu i podatak na koji se poruka odnosi.
-        </div>
-
-
-        <div
-          id="form-success"
-          class="form-success"
-          hidden
-          role="status"
-          aria-live="polite"
-        >
-          Vaša poruka je uspješno poslana. Hvala na javljanju i
-          doprinosu Digitalnom arhivu roda Tandara.
-        </div>
-
-
-        <form
-          class="archive-contact-form"
-          action="https://formsubmit.co/a31f95f1043ce34cae4053620a6a3db6"
-          method="POST"
-          accept-charset="UTF-8"
-        >
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="[TANDARA] Kontakt poruka sa web stranice"
-          >
-
-          <input
-            type="hidden"
-            name="_next"
-            value="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html?sent=1#kontakt-obrazac"
-          >
-
-          <input
-            type="hidden"
-            name="_url"
-            value="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html"
-          >
-
-          <input
-            type="hidden"
-            name="_template"
-            value="table"
-          >
-
-          <input
-            type="hidden"
-            name="_captcha"
-            value="true"
-          >
-
-          <input
-            type="hidden"
-            name="_blacklist"
-            value="<script,</script,javascript:,vbscript:,data:text/html,onerror=,onload=,onclick=,guest post,SEO service,backlink,casino,viagra,crypto investment,loan offer"
-          >
-
-          <input
-            type="hidden"
-            name="_autoresponse"
-            value="Poštovani, zahvaljujemo što ste kontaktirali Digitalni arhiv roda Tandara. Vaša poruka je uspješno zaprimljena. Odgovorit ćemo Vam u najkraćem mogućem roku. Srdačan pozdrav, Digitalni arhiv roda Tandara."
-          >
-
-          <input
-            class="contact-honeypot"
-            type="text"
-            name="_honey"
-            tabindex="-1"
-            autocomplete="off"
-            aria-hidden="true"
-          >
-
-
-          <div class="form-row">
-
-            <div>
-              <label for="ime">
-                Ime i prezime *
-              </label>
-
-              <input
-                id="ime"
-                name="Ime i prezime"
-                type="text"
-                minlength="3"
-                maxlength="80"
-                required
-              >
-            </div>
-
-
-            <div>
-              <label for="mjesto">
-                Mjesto i država *
-              </label>
-
-              <input
-                id="mjesto"
-                name="Mjesto i država"
-                type="text"
-                minlength="2"
-                maxlength="100"
-                required
-              >
-            </div>
-
-          </div>
-
-
-          <div class="form-row">
-
-            <div>
-              <label for="email-posiljatelja">
-                E-mail za odgovor *
-              </label>
-
-              <input
-                id="email-posiljatelja"
-                name="email"
-                type="email"
-                maxlength="120"
-                required
-              >
-            </div>
-
-
-            <div>
-              <label for="grana">
-                Grana roda, ako je poznata
-              </label>
-
-              <select
-                id="grana"
-                name="Grana roda"
-              >
-                <option value="Nije poznato">
-                  Nije poznato
-                </option>
-
-                <option value="Jurina grana">
-                  Jurina grana
-                </option>
-
-                <option value="Petrova grana">
-                  Petrova grana
-                </option>
-
-                <option value="Antina grana">
-                  Antina grana
-                </option>
-
-                <option value="Matina grana">
-                  Matina grana
-                </option>
-
-                <option value="Drugo / potrebno provjeriti">
-                  Drugo / potrebno provjeriti
-                </option>
-              </select>
-            </div>
-
-          </div>
-
-
-          <div>
-
-            <label for="vrsta-upita">
-              Vrsta upita *
-            </label>
-
-            <select
-              id="vrsta-upita"
-              name="Vrsta upita"
-              required
-            >
-              <option
-                value=""
-                selected
-                disabled
-              >
-                Odaberite jednu mogućnost *
-              </option>
-
-              <option value="Opća poruka ili suradnja">
-                Opća poruka ili suradnja
-              </option>
-
-              <option value="Dopuna ili ispravak rodoslovlja">
-                Dopuna ili ispravak rodoslovlja
-              </option>
-
-              <option value="Fotografija ili dokument">
-                Fotografija ili dokument
-              </option>
-
-              <option value="Zahtjev za uklanjanje ili izmjenu podataka">
-                Zahtjev za uklanjanje ili izmjenu podataka
-              </option>
-
-              <option value="Drugo">
-                Drugo
-              </option>
-            </select>
-
-          </div>
-
-
-          <div>
-
-            <label for="povezanost">
-              Povezanost s rodom Tandara *
-            </label>
-
-            <input
-              id="povezanost"
-              name="Povezanost s rodom Tandara"
-              type="text"
-              minlength="3"
-              maxlength="250"
-              placeholder="npr. nosim prezime Tandara, potomak sam roda Tandara, istražujem obitelj..."
-              required
-            >
-
-          </div>
-
-
-          <div>
-
-            <label for="poruka">
-              Poruka *
-            </label>
-
-            <textarea
-              id="poruka"
-              name="Poruka"
-              minlength="10"
-              maxlength="3000"
-              required
-            ></textarea>
-
-          </div>
-
-
-          <fieldset class="required-choice">
-
-            <legend>
-              Želite li dopustiti javnu objavu poruke? *
-            </legend>
-
-            <label class="checkbox-line">
-              <input
-                type="radio"
-                name="Dopuštenje za objavu poruke"
-                value="DA"
-                required
-              >
-
-              <span>
-                DA – dopuštam da se moja poruka, nakon pregleda
-                i odobrenja, može objaviti u Knjizi poruka.
-              </span>
-            </label>
-
-            <label class="checkbox-line">
-              <input
-                type="radio"
-                name="Dopuštenje za objavu poruke"
-                value="NE"
-                required
-              >
-
-              <span>
-                NE – poruka je samo za komunikaciju s autorom
-                i nije za javnu objavu.
-              </span>
-            </label>
-
-          </fieldset>
-
-
-          <fieldset class="required-choice">
-
-            <legend>
-              Ako se poruka objavi, dopuštate li objavu
-              imena i mjesta? *
-            </legend>
-
-            <label class="checkbox-line">
-              <input
-                type="radio"
-                name="Dopuštenje za objavu imena i mjesta"
-                value="DA"
-                required
-              >
-
-              <span>
-                DA – dopuštam objavu imena i mjesta uz poruku.
-                E-mail adresa se ne objavljuje.
-              </span>
-            </label>
-
-            <label class="checkbox-line">
-              <input
-                type="radio"
-                name="Dopuštenje za objavu imena i mjesta"
-                value="NE"
-                required
-              >
-
-              <span>
-                NE – ne dopuštam objavu imena i mjesta.
-              </span>
-            </label>
-
-          </fieldset>
-
-
-          <label class="checkbox-line">
-
-            <input
-              type="checkbox"
-              name="Suglasnost s pravilima privatnosti"
-              value="DA"
-              required
-            >
-
-            <span>
-              Potvrđujem da sam pročitao/la
-              <a href="privatnost.html">
-                Politiku privatnosti
-              </a>
-              i suglasan/na sam da se poslani podaci koriste
-              za odgovor, provjeru i dopunu Digitalnog arhiva
-              roda Tandara.
-            </span>
-
-          </label>
-
-
-          <p class="form-note">
-            Fotografije i dokumente možete poslati naknadno kao
-            privitak u nastavku e-mail komunikacije.
-          </p>
-
-
-          <button type="submit">
-            Pošalji poruku
-          </button>
-
-        </form>
-
-      </section>
-
-
-      <section id="kako-pomoci">
-
-        <h2>Kako možete pomoći</h2>
-
-        <p>
-          Digitalni arhiv raste uz pomoć svih koji čuvaju dio
-          obiteljske povijesti. Posebno su vrijedni:
-        </p>
-
-        <ul>
-          <li>
-            podaci o precima, potomcima i obiteljskim vezama,
-          </li>
-
-          <li>
-            informacije o pripadnosti Jurinoj, Petrovoj,
-            Antinoj ili Matinoj grani,
-          </li>
-
-          <li>
-            stare obiteljske fotografije, pisma, dokumenti
-            i matični zapisi,
-          </li>
-
-          <li>
-            podaci o iseljavanju, mjestima života i migracijama
-            obitelji,
-          </li>
-
-          <li>
-            obiteljske priče, sjećanja, nadimci, zanimanja
-            i običaji,
-          </li>
-
-          <li>
-            ispravci ili dopune već objavljenih podataka.
-          </li>
-        </ul>
-
-      </section>
-
-
-      <section id="sto-poslati">
-
-        <h2>Što navesti u poruci</h2>
-
-        <p>
-          Kako bi se poruka lakše obradila i pravilno povezala
-          s arhivom, dobro je navesti:
-        </p>
-
-        <ul>
-          <li>ime i prezime,</li>
-          <li>mjesto i državu iz koje se javljate,</li>
-          <li>e-mail adresu za odgovor,</li>
-          <li>kako ste povezani s prezimenom Tandara,</li>
-          <li>kojoj grani roda pripadate, ako je poznato,</li>
-          <li>vrstu i razlog upita,</li>
-          <li>
-            želite li da se Vaša poruka objavi u Knjizi poruka.
-          </li>
-        </ul>
-
-        <p>
-          Ako niste sigurni što je važno, pošaljite i ono za
-          što mislite da je možda sitnica — u rodoslovlju upravo
-          takvi tragovi često otvore važne poveznice.
-        </p>
-
-      </section>
-
-
-      <section id="suglasnost">
-
-        <h2>Suglasnost za objavu</h2>
-
-        <p>
-          Poruke, fotografije i dokumenti neće se javno
-          objavljivati bez dopuštenja pošiljatelja.
-        </p>
-
-        <p>
-          Ako označite da dopuštate javnu objavu poruke,
-          ona se može nakon pregleda objaviti u Knjizi poruka.
-          E-mail adresa se ne objavljuje.
-        </p>
-
-      </section>
-
-
-      <section id="privatnost">
-
-        <h2>Prije slanja osobnih podataka</h2>
-
-        <p>
-          Pošaljite samo podatke koji su potrebni za Vaš upit
-          ili za provjeru rodoslovne veze. Detaljna pravila
-          nalaze se u
-          <a href="privatnost.html">Politici privatnosti</a>.
-        </p>
-
-        <p>
-          Ako tražite ispravak ili uklanjanje podatka, navedite
-          točno na koju se osobu ili zapis zahtjev odnosi kako
-          bi se promjena mogla provjeriti bez zadiranja u ostale
-          dijelove rodoslovlja.
-        </p>
-
-      </section>
-
-
-      <section id="zavrsna-poruka">
-
-        <h2>Što se događa nakon Vaše poruke</h2>
-
-        <p>
-          Svaka poruka najprije se pregledava i razvrstava prema
-          vrsti upita. Ako sadrži novi rodoslovni podatak,
-          uspoređuje se s postojećim zapisima i po potrebi se od
-          pošiljatelja traži dodatno objašnjenje ili izvor.
-        </p>
-
-        <p>
-          Poruke namijenjene Knjizi poruka objavljuju se samo uz
-          dopuštenje autora poruke, dok se novi rodoslovni podaci
-          uključuju u arhiv nakon provjere.
-        </p>
-
-      </section>
-
-    </article>
-
-  </main>
-
-
-  <script>
-    (() => {
-      const params = new URLSearchParams(window.location.search);
-      const success = document.getElementById("form-success");
-
-      if (success && params.get("sent") === "1") {
-        success.hidden = false;
-      }
-    })();
-  </script>
+<main class="content-page">
+<article class="content-card">
+
+<h1>Kontakt i suradnja</h1>
+
+<section id="uvod">
+
+<h2>Centar za suradnju Digitalnog arhiva roda Tandara</h2>
+
+<p>
+Ako nosite prezime <strong>Tandara</strong>,
+potječete iz roda Tandara ili istražujete ovu obitelj,
+ovdje možete poslati podatke, dopune, fotografije,
+dokumente, pitanja ili prijedloge za
+<strong>Digitalni arhiv roda Tandara</strong>.
+</p>
+
+<p>
+Ovdje možete prijaviti i pogrešan ili zastario podatak
+te zatražiti njegovu provjeru, ispravak, zamjenu ili
+uklanjanje.
+</p>
+
+</section>
+
+<section id="kontakt-obrazac">
+
+<h2>Kontakt obrazac</h2>
+
+<p>
+Poruku možete poslati izravno preko obrasca.
+Molimo unesite dovoljno podataka da se Vaš upit može
+povezati s odgovarajućom osobom, obitelji ili granom roda.
+</p>
+
+<div class="form-required-notice" role="note">
+<strong>Važna napomena:</strong><br>
+Polja označena zvjezdicom obavezna su.
+Za dopunu ili ispravak rodoslovlja navedite što točnije
+osobu, granu i podatak na koji se poruka odnosi.
+</div>
+
+<div
+id="form-success"
+class="form-success"
+hidden
+role="status"
+aria-live="polite"
+>
+Vaša poruka je uspješno poslana. Hvala na javljanju i
+doprinosu Digitalnom arhivu roda Tandara.
+</div>
+
+<form
+class="archive-contact-form"
+action="https://formsubmit.co/a31f95f1043ce34cae4053620a6a3db6"
+method="POST"
+accept-charset="UTF-8"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="[TANDARA] Kontakt poruka sa web stranice"
+>
+
+<input
+type="hidden"
+name="_next"
+value="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html?sent=1#kontakt-obrazac"
+>
+
+<input
+type="hidden"
+name="_url"
+value="https://tandarajure-crypto.github.io/tandara-public-v2/kontakti.html"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="true"
+>
+
+<input
+type="hidden"
+name="_blacklist"
+value="<script,</script,javascript:,vbscript:,data:text/html,onerror=,onload=,onclick=,guest post,SEO service,backlink,casino,viagra,crypto investment,loan offer"
+>
+
+<input
+type="hidden"
+name="_autoresponse"
+value="Poštovani, zahvaljujemo što ste kontaktirali Digitalni arhiv roda Tandara. Vaša poruka je uspješno zaprimljena. Odgovorit ćemo Vam u najkraćem mogućem roku. Srdačan pozdrav, Digitalni arhiv roda Tandara."
+>
+
+<input
+class="contact-honeypot"
+type="text"
+name="_honey"
+tabindex="-1"
+autocomplete="off"
+aria-hidden="true"
+>
+
+<div class="form-row">
+
+<div>
+<label for="ime">
+Ime i prezime *
+</label>
+
+<input
+id="ime"
+name="Ime i prezime"
+type="text"
+minlength="3"
+maxlength="80"
+required
+>
+</div>
+
+<div>
+<label for="mjesto">
+Mjesto i država *
+</label>
+
+<input
+id="mjesto"
+name="Mjesto i država"
+type="text"
+minlength="2"
+maxlength="100"
+required
+>
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div>
+<label for="email-posiljatelja">
+E-mail za odgovor *
+</label>
+
+<input
+id="email-posiljatelja"
+name="email"
+type="email"
+maxlength="120"
+required
+>
+</div>
+
+<div>
+<label for="grana">
+Grana roda, ako je poznata
+</label>
+
+<select
+id="grana"
+name="Grana roda"
+>
+<option value="Nije poznato">
+Nije poznato
+</option>
+
+<option value="Jurina grana">
+Jurina grana
+</option>
+
+<option value="Petrova grana">
+Petrova grana
+</option>
+
+<option value="Antina grana">
+Antina grana
+</option>
+
+<option value="Matina grana">
+Matina grana
+</option>
+
+<option value="Drugo / potrebno provjeriti">
+Drugo / potrebno provjeriti
+</option>
+</select>
+</div>
+
+</div>
+
+<div>
+
+<label for="vrsta-upita">
+Vrsta upita *
+</label>
+
+<select
+id="vrsta-upita"
+name="Vrsta upita"
+required
+>
+
+<option
+value=""
+selected
+disabled
+>
+Odaberite jednu mogućnost *
+</option>
+
+<option value="Opća poruka ili suradnja">
+Opća poruka ili suradnja
+</option>
+
+<option value="Dopuna ili ispravak rodoslovlja">
+Dopuna ili ispravak rodoslovlja
+</option>
+
+<option value="Fotografija ili dokument">
+Fotografija ili dokument
+</option>
+
+<option value="Zahtjev za uklanjanje ili izmjenu podataka">
+Zahtjev za uklanjanje ili izmjenu podataka
+</option>
+
+<option value="Drugo">
+Drugo
+</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label for="povezanost">
+Povezanost s rodom Tandara *
+</label>
+
+<input
+id="povezanost"
+name="Povezanost s rodom Tandara"
+type="text"
+minlength="3"
+maxlength="250"
+placeholder="npr. nosim prezime Tandara, potomak sam roda Tandara, istražujem obitelj..."
+required
+>
+
+</div>
+
+<div>
+
+<label for="poruka">
+Poruka *
+</label>
+
+<textarea
+id="poruka"
+name="Poruka"
+minlength="10"
+maxlength="3000"
+required
+></textarea>
+
+</div>
+
+<fieldset class="required-choice">
+
+<legend>
+Želite li dopustiti javnu objavu poruke? *
+</legend>
+
+<label class="checkbox-line">
+<input
+type="radio"
+name="Dopuštenje za objavu poruke"
+value="DA"
+required
+>
+
+<span>
+DA – dopuštam da se moja poruka, nakon pregleda
+i odobrenja, može objaviti u Knjizi poruka.
+</span>
+</label>
+
+<label class="checkbox-line">
+<input
+type="radio"
+name="Dopuštenje za objavu poruke"
+value="NE"
+required
+>
+
+<span>
+NE – poruka je samo za komunikaciju s autorom
+i nije za javnu objavu.
+</span>
+</label>
+
+</fieldset>
+
+<fieldset class="required-choice">
+
+<legend>
+Ako se poruka objavi, dopuštate li objavu
+imena i mjesta? *
+</legend>
+
+<label class="checkbox-line">
+<input
+type="radio"
+name="Dopuštenje za objavu imena i mjesta"
+value="DA"
+required
+>
+
+<span>
+DA – dopuštam objavu imena i mjesta uz poruku.
+E-mail adresa se ne objavljuje.
+</span>
+</label>
+
+<label class="checkbox-line">
+<input
+type="radio"
+name="Dopuštenje za objavu imena i mjesta"
+value="NE"
+required
+>
+
+<span>
+NE – ne dopuštam objavu imena i mjesta.
+</span>
+</label>
+
+</fieldset>
+
+<label class="checkbox-line">
+
+<input
+type="checkbox"
+name="Suglasnost s pravilima privatnosti"
+value="DA"
+required
+>
+
+<span>
+Potvrđujem da sam pročitao/la
+<a href="privatnost.html">
+Politiku privatnosti
+</a>
+i suglasan/na sam da se poslani podaci koriste
+za odgovor, provjeru i dopunu Digitalnog arhiva
+roda Tandara.
+</span>
+
+</label>
+
+<p class="form-note">
+Fotografije i dokumente možete poslati naknadno kao
+privitak u nastavku e-mail komunikacije.
+</p>
+
+<button type="submit">
+Pošalji poruku
+</button>
+
+</form>
+
+</section>
+
+<section id="kako-pomoci">
+
+<h2>Kako možete pomoći</h2>
+
+<p>
+Digitalni arhiv raste uz pomoć svih koji čuvaju dio
+obiteljske povijesti. Posebno su vrijedni:
+</p>
+
+<ul>
+<li>
+podaci o precima, potomcima i obiteljskim vezama,
+</li>
+
+<li>
+informacije o pripadnosti Jurinoj, Petrovoj,
+Antinoj ili Matinoj grani,
+</li>
+
+<li>
+stare obiteljske fotografije, pisma, dokumenti
+i matični zapisi,
+</li>
+
+<li>
+podaci o iseljavanju, mjestima života i migracijama
+obitelji,
+</li>
+
+<li>
+obiteljske priče, sjećanja, nadimci, zanimanja
+i običaji,
+</li>
+
+<li>
+ispravci ili dopune već objavljenih podataka.
+</li>
+</ul>
+
+</section>
+
+<section id="sto-poslati">
+
+<h2>Što navesti u poruci</h2>
+
+<p>
+Kako bi se poruka lakše obradila i pravilno povezala
+s arhivom, dobro je navesti:
+</p>
+
+<ul>
+<li>ime i prezime,</li>
+<li>mjesto i državu iz koje se javljate,</li>
+<li>e-mail adresu za odgovor,</li>
+<li>kako ste povezani s prezimenom Tandara,</li>
+<li>kojoj grani roda pripadate, ako je poznato,</li>
+<li>vrstu i razlog upita,</li>
+<li>
+želite li da se Vaša poruka objavi u Knjizi poruka.
+</li>
+</ul>
+
+<p>
+Ako niste sigurni što je važno, pošaljite i ono za
+što mislite da je možda sitnica — u rodoslovlju upravo
+takvi tragovi često otvore važne poveznice.
+</p>
+
+</section>
+
+<section id="suglasnost">
+
+<h2>Suglasnost za objavu</h2>
+
+<p>
+Poruke, fotografije i dokumenti neće se javno
+objavljivati bez dopuštenja pošiljatelja.
+</p>
+
+<p>
+Ako označite da dopuštate javnu objavu poruke,
+ona se može nakon pregleda objaviti u Knjizi poruka.
+E-mail adresa se ne objavljuje.
+</p>
+
+</section>
+
+<section id="privatnost">
+
+<h2>Prije slanja osobnih podataka</h2>
+
+<p>
+Pošaljite samo podatke koji su potrebni za Vaš upit
+ili za provjeru rodoslovne veze. Detaljna pravila
+nalaze se u
+<a href="privatnost.html">Politici privatnosti</a>.
+</p>
+
+<p>
+Ako tražite ispravak ili uklanjanje podatka, navedite
+točno na koju se osobu ili zapis zahtjev odnosi kako
+bi se promjena mogla provjeriti bez zadiranja u ostale
+dijelove rodoslovlja.
+</p>
+
+</section>
+
+<section id="zavrsna-poruka">
+
+<h2>Što se događa nakon Vaše poruke</h2>
+
+<p>
+Svaka poruka najprije se pregledava i razvrstava prema
+vrsti upita. Ako sadrži novi rodoslovni podatak,
+uspoređuje se s postojećim zapisima i po potrebi se od
+pošiljatelja traži dodatno objašnjenje ili izvor.
+</p>
+
+<p>
+Poruke namijenjene Knjizi poruka objavljuju se samo uz
+dopuštenje autora poruke, dok se novi rodoslovni podaci
+uključuju u arhiv nakon provjere.
+</p>
+
+</section>
+
+</article>
+</main>
+
+<script>
+(() => {
+const params = new URLSearchParams(window.location.search);
+const success = document.getElementById("form-success");
+
+if (success && params.get("sent") === "1") {
+success.hidden = false;
+}
+})();
+</script>
 
 </body>
 </html>
