@@ -22,31 +22,10 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="stylesheet" href="../tandara-common/css/subpages-common.css?v=20260916-2">
-
-<style>
-.audio-pronunciation-box{margin:22px 0 30px;padding:20px 24px;border:1px solid rgba(120,88,45,.25);border-radius:14px;background:rgba(245,238,220,.75)}
-.audio-pronunciation-title{margin:0 0 16px!important;color:#4b351c;font-size:18px!important;font-weight:700;text-align:left!important}
-.audio-icon-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.audio-icon-button{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid rgba(75,53,28,.35);border-radius:999px;background:#fff;color:#3d2a16;box-shadow:0 3px 8px rgba(0,0,0,.12);font-family:Georgia,"Times New Roman",serif;font-size:16px;font-weight:700;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
-.audio-icon-button:hover{transform:translateY(-2px) scale(1.02);background:#fff8ec;box-shadow:0 5px 12px rgba(0,0,0,.18)}
-.audio-icon-button:focus-visible{outline:3px solid #2f6d3b;outline-offset:3px}
-.speaker-icon{display:inline-flex;width:42px;height:42px;flex:0 0 42px;align-items:center;justify-content:center;border-radius:50%;background:#2f6d3b;box-shadow:0 2px 5px rgba(0,0,0,.18)}
-.speaker-icon img{display:block;width:25px;height:25px;object-fit:contain;filter:brightness(0) invert(1)}
-.audio-icon-button.playing{border-color:rgba(56,110,43,.55);background:#e8f4df}
-.audio-icon-button.playing .speaker-icon{background:#24582f;box-shadow:0 0 0 4px rgba(47,109,59,.18);animation:speakerPulse 1.2s ease-in-out infinite}
-.audio-label-small{font-size:13px;font-weight:500;opacity:.85}
-.audio-status{min-height:1.4em;margin:14px 0 0!important;color:#4b351c;font-size:14px!important;text-align:left!important}
-@keyframes speakerPulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
-@media(max-width:600px){
-.audio-icon-row{flex-direction:column;align-items:stretch}
-.audio-icon-button{width:100%;justify-content:flex-start}
-}
-@media(prefers-reduced-motion:reduce){
-.audio-icon-button,.speaker-icon{animation:none!important;transition:none!important}
-}
-</style>
+<link rel="stylesheet" href="../tandara-common/css/audio-pronunciation.css?v=20260917-1">
 
 <script defer src="../tandara-common/js/site-common.js?v=20260917-1"></script>
+<script defer src="../tandara-common/js/audio-pronunciation.js?v=20260917-7"></script>
 </head>
 
 <body data-site-root="./">
@@ -197,58 +176,46 @@ Click the speaker icon a few times and listen to the pronunciation
 <button
 type="button"
 class="audio-icon-button"
-id="playHR"
+data-audio-src="../tandara-common/audio/audio-hr.mp3"
+data-audio-label="the Croatian pronunciation of Tandara"
 aria-label="Listen to the Croatian pronunciation of the surname Tandara"
 aria-pressed="false"
 >
-<span class="speaker-icon">
 <img
-src="../tandara-common/slike/ikone/speaker.png?v=20260916-2"
+class="audio-icon-image"
+src="../tandara-common/slike/ikone/speaker.png"
 alt=""
 aria-hidden="true"
 >
-</span>
-
-<span>
-Croatian pronunciation<br>
-<span class="audio-label-small">Tandara</span>
+<span class="audio-button-text">
+<span class="audio-button-lang">Croatian pronunciation</span>
+<span class="audio-button-word">Tandara</span>
 </span>
 </button>
 
 <button
 type="button"
 class="audio-icon-button"
-id="playRO"
+data-audio-src="../tandara-common/audio/audio-ro.mp3"
+data-audio-label="the Romanian pronunciation of Țândără"
 aria-label="Listen to the Romanian pronunciation of Țândără"
 aria-pressed="false"
 >
-<span class="speaker-icon">
 <img
-src="../tandara-common/slike/ikone/speaker.png?v=20260916-2"
+class="audio-icon-image"
+src="../tandara-common/slike/ikone/speaker.png"
 alt=""
 aria-hidden="true"
 >
-</span>
-
-<span>
-Romanian pronunciation<br>
-<span class="audio-label-small">Țândără</span>
+<span class="audio-button-text">
+<span class="audio-button-lang">Romanian pronunciation</span>
+<span class="audio-button-word">Țândără</span>
 </span>
 </button>
 
 </div>
 
-<audio
-id="audioHR"
-preload="auto"
-src="../tandara-common/audio/audio-hr.mp3"
-></audio>
-
-<audio
-id="audioRO"
-preload="auto"
-src="../tandara-common/audio/audio-ro.mp3"
-></audio>
+<audio id="pronunciationPlayer" preload="none"></audio>
 
 <p
 class="audio-status"
@@ -485,102 +452,6 @@ page.
 
 </article>
 </main>
-
-<script>
-(() => {
-"use strict";
-
-const audioHR=document.getElementById("audioHR");
-const audioRO=document.getElementById("audioRO");
-const btnHR=document.getElementById("playHR");
-const btnRO=document.getElementById("playRO");
-const audioStatus=document.getElementById("audioStatus");
-
-if(!audioHR||!audioRO||!btnHR||!btnRO)return;
-
-function setStatus(message){
-if(audioStatus)audioStatus.textContent=message||"";
-}
-
-function setButtonState(button,isPlaying){
-button.classList.toggle("playing",isPlaying);
-button.setAttribute("aria-pressed",isPlaying?"true":"false");
-}
-
-function resetButtons(){
-setButtonState(btnHR,false);
-setButtonState(btnRO,false);
-}
-
-function stopAudio(audio){
-audio.pause();
-try{audio.currentTime=0;}
-catch(error){/* no further action */}
-}
-
-function playSelectedAudio(audio,button,otherAudio,label){
-
-if(!audio.paused){
-audio.pause();
-setButtonState(button,false);
-setStatus("Playback stopped.");
-return;
-}
-
-stopAudio(otherAudio);
-resetButtons();
-
-try{audio.currentTime=0;}
-catch(error){/* audio is loading */}
-
-const playPromise=audio.play();
-
-if(playPromise&&typeof playPromise.then==="function"){
-playPromise
-.then(function(){
-setButtonState(button,true);
-setStatus("Playing "+label+".");
-})
-.catch(function(){
-setButtonState(button,false);
-setStatus("The audio could not be played.");
-});
-}
-}
-
-btnHR.addEventListener("click",function(){
-playSelectedAudio(
-audioHR,
-btnHR,
-audioRO,
-"the Croatian pronunciation of Tandara"
-);
-});
-
-btnRO.addEventListener("click",function(){
-playSelectedAudio(
-audioRO,
-btnRO,
-audioHR,
-"the Romanian pronunciation of Țândără"
-);
-});
-
-audioHR.addEventListener("ended",function(){
-resetButtons();
-setStatus("");
-});
-
-audioRO.addEventListener("ended",function(){
-resetButtons();
-setStatus("");
-});
-
-audioHR.load();
-audioRO.load();
-
-})();
-</script>
 
 </body>
 </html>
