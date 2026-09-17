@@ -1,1252 +1,763 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex,nofollow,noarchive">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+<title>Migration and Distribution | TANDARA — SURNAME</title>
+<meta name="description" content="Migration and geographical distribution of the Tandara family through history in Croatia, Bosnia and Herzegovina and other countries.">
 
-  <meta
-    name="referrer"
-    content="strict-origin-when-cross-origin"
-  >
+<link rel="canonical" href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-en.html">
+<link rel="alternate" hreflang="hr" href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-hr.html">
+<link rel="alternate" hreflang="en" href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-en.html">
+<link rel="alternate" hreflang="x-default" href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-hr.html">
 
-  <meta
-    name="robots"
-    content="noindex,nofollow,noarchive"
-  >
+<meta property="og:type" content="website">
+<meta property="og:title" content="Migration and Distribution | TANDARA — SURNAME">
+<meta property="og:description" content="Migration and geographical distribution of the Tandara family through history in Croatia, Bosnia and Herzegovina and other countries.">
+<meta property="og:url" content="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-en.html">
+<meta property="og:image" content="https://tandarajure-crypto.github.io/tandara-common/slike/common-foto/family-tree.webp">
+<meta name="twitter:card" content="summary_large_image">
 
-  <title>
-    Migration and Distribution | TANDARA — SURNAME
-  </title>
+<link rel="stylesheet" href="../tandara-common/css/subpages-common.css?v=20260916-2">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin="anonymous">
 
-  <meta
-    name="description"
-    content="Migration and geographical distribution of the Tandara family through history in Croatia, Bosnia and Herzegovina and other countries."
-  >
+<style>
+.migration-map-section{margin-top:52px}
+.migration-map{width:100%;height:560px;margin:18px 0 28px;border-radius:12px;overflow:hidden}
+.migration-map--ricice{height:450px}
+.migration-table{width:100%;border-collapse:collapse;margin:18px 0 30px}
+.migration-table th,.migration-table td{padding:8px 10px;border:1px solid rgba(80,60,35,.35);text-align:left}
+.migration-table th{font-weight:700}
+.ricice-label-no-arrow{border:0;background:transparent;box-shadow:none;font-weight:700}
+.leaflet-tooltip.ricice-label-no-arrow::before{display:none}
+@media(max-width:700px){.migration-map,.migration-map--ricice{height:460px}}
+@media(max-width:480px){
+.migration-map,.migration-map--ricice{height:400px}
+.migration-table th,.migration-table td{padding:6px 8px}
+}
+</style>
 
-  <link
-    rel="canonical"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-en.html"
-  >
-
-  <link
-    rel="alternate"
-    hreflang="hr"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-hr.html"
-  >
-
-  <link
-    rel="alternate"
-    hreflang="en"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-en.html"
-  >
-
-  <link
-    rel="alternate"
-    hreflang="x-default"
-    href="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-hr.html"
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:title"
-    content="Migration and Distribution | TANDARA — SURNAME"
-  >
-
-  <meta
-    property="og:description"
-    content="Migration and geographical distribution of the Tandara family through history in Croatia, Bosnia and Herzegovina and other countries."
-  >
-
-  <meta
-    property="og:url"
-    content="https://tandarajure-crypto.github.io/tandara-public-v2/migracije-en.html"
-  >
-
-  <meta
-    property="og:image"
-    content="https://tandarajure-crypto.github.io/tandara-common/slike/common-foto/family-tree.webp"
-  >
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <link
-    rel="stylesheet"
-    href="../tandara-common/css/subpages-common.css?v=20260916-2"
-  >
-
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="anonymous"
-  >
-
-  <style>
-    .migration-map-section {
-      margin-top: 52px;
-    }
-
-    .migration-map {
-      width: 100%;
-      height: 560px;
-      margin: 18px 0 28px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .migration-map--ricice {
-      height: 450px;
-    }
-
-    .migration-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 18px 0 30px;
-    }
-
-    .migration-table th,
-    .migration-table td {
-      padding: 8px 10px;
-      border: 1px solid rgba(80, 60, 35, 0.35);
-      text-align: left;
-    }
-
-    .migration-table th {
-      font-weight: 700;
-    }
-
-    .ricice-label-no-arrow {
-      border: 0;
-      background: transparent;
-      box-shadow: none;
-      font-weight: 700;
-    }
-
-    .leaflet-tooltip.ricice-label-no-arrow::before {
-      display: none;
-    }
-
-    @media (max-width: 700px) {
-      .migration-map,
-      .migration-map--ricice {
-        height: 460px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .migration-map,
-      .migration-map--ricice {
-        height: 400px;
-      }
-
-      .migration-table th,
-      .migration-table td {
-        padding: 6px 8px;
-      }
-    }
-  </style>
-
-  <script
-    defer
-    src="../tandara-common/js/subpages-common.js?v=20260916-2"
-  ></script>
+<script defer src="../tandara-common/js/site-common.js?v=20260917-1"></script>
 </head>
 
-
 <body data-site-root="./">
-
-  <main class="content-page">
-
-    <article class="content-card">
-
-      <h1>Migration and Distribution of the Tandara Family</h1>
-
-
-      <section>
-
-        <h2>Introduction</h2>
-
-        <p>
-          This chapter follows the movement of individual
-          branches of the Tandara family after they had become
-          established in their original area. Rather than
-          repeating the history of the surname's origin, the
-          emphasis is on migration routes, the periods in which
-          these movements can be traced, and the places where
-          new family centres developed.
-        </p>
-
-        <p>
-          Ričice remains the starting point of this presentation,
-          while every later location is viewed as part of a
-          migration path that should be connected with a specific
-          family branch and the available sources.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Ričice – the Family's Place of Origin</h2>
-
-        <p>
-          The earliest reliably known centre of the family is
-          Ričice in the Imotski region. It is here that, during
-          the first half of the 18th century, the development
-          of the family from which the later branches emerged
-          can be followed.
-        </p>
-
-        <p>
-          For centuries, Ričice was more than simply a place
-          of residence. It represents the point of origin from
-          which individual family members gradually moved
-          towards neighbouring areas while maintaining an
-          awareness of their common ancestry.
-        </p>
-
-      </section>
-
-
-      <section
-        class="migration-map-section"
-        aria-labelledby="osm1-en-title"
-      >
-
-        <h2 id="osm1-en-title">
-          OpenStreetMap 1: Ričice – Origin of the Surname
-        </h2>
-
-        <div
-          id="ricice-map"
-          class="migration-map migration-map--ricice"
-          aria-label="Map of Ričice, Zavelim and Livno"
-        ></div>
-
-      </section>
-
-
-      <section
-        class="migracije-ricice-media"
-        aria-labelledby="ricice-views-title"
-      >
-
-        <h2 id="ricice-views-title">
-          Ričice Through the Seasons and from Different Perspectives
-        </h2>
-
-        <div class="migracije-ricice-gallery">
-
-          <figure class="migracije-ricice-item">
-
-            <img
-              src="../tandara-common/slike/ricice/ricice1.jpg"
-              alt="Ričice and Green Lake from the air – Vice Tandara"
-              loading="lazy"
-              decoding="async"
-            >
-
-            <figcaption>
-              Ričice and Green Lake from the air – Vice Tandara
-            </figcaption>
-
-          </figure>
-
-
-          <figure class="migracije-ricice-item">
-
-            <img
-              src="../tandara-common/slike/ricice/ricice5.jpg"
-              alt="Green Lake in winter, viewed from higher ground"
-              loading="lazy"
-              decoding="async"
-            >
-
-            <figcaption>
-              Green Lake in winter – view from higher ground
-            </figcaption>
-
-          </figure>
-
-
-          <figure class="migracije-ricice-item">
-
-            <img
-              src="../tandara-common/slike/ricice/ricice6.jpg"
-              alt="Ričice and Green Lake in the green summer landscape"
-              loading="lazy"
-              decoding="async"
-            >
-
-            <figcaption>
-              Ričice and Green Lake in the green summer landscape
-            </figcaption>
-
-          </figure>
-
-        </div>
-
-      </section>
-
-
-      <section>
-
-        <h2>Expansion Within the Imotski Region</h2>
-
-        <p>
-          During the 18th and 19th centuries, the number of
-          family members gradually increased. As new households
-          were formed, some families moved to nearby places in
-          search of cultivable land, an opportunity to establish
-          their own homes, or better economic conditions.
-        </p>
-
-        <p>
-          Such migrations were common among almost all families
-          of the Imotski region and represented a natural
-          continuation of demographic development.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Expansion Towards Zavelim, Tomislavgrad and Livno</h2>
-
-        <p>
-          The first reliably documented expansion of the
-          Tandara surname beyond Ričice is connected with the
-          Zavelim area, a broad region containing around ten
-          villages. Among them is the village of Tandara,
-          named after the first settlers from Ričice —
-          members of the Tandara family.
-        </p>
-
-        <p>
-          Between 1806 and 1819, construction of the first
-          houses in this area began, followed by the gradual
-          relocation of two families from Ričice. According
-          to family tradition and research carried out so far,
-          these were the family of Ante Antin, ancestor of
-          the Lovro branch and later the Križan branch, and
-          the family of Martin Petrov, ancestor of the Toma
-          branch and the Tromić line. Their arrival marked the
-          formation of the Zavelim branch of the Tandara family,
-          a direct continuation of the original Ričice line.
-        </p>
-
-        <p>
-          The Zavelim branch played a key role in preserving
-          the surname, family identity and lasting connection
-          with the roots in Ričice. The arrival of these
-          families created a new family centre from which
-          additional family lines later developed.
-        </p>
-
-        <p>
-          A second expansion of the Tandara family most likely
-          led towards the Tomislavgrad area. From there, some
-          families moved to Livno, where their descendants
-          still live today. The Tandara families of Livno will
-          be presented in a separate chapter entitled
-          <strong>The Livno Tandaras</strong>.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Emigration to Europe</h2>
-
-        <p>
-          The second half of the 20th century brought a new
-          wave of migration. Economic circumstances led many
-          families to leave temporarily or permanently for work
-          in Western European countries.
-        </p>
-
-        <p>The largest numbers settled in:</p>
-
-        <ul>
-          <li>Germany</li>
-          <li>Austria</li>
-          <li>Switzerland</li>
-          <li>the United Kingdom</li>
-        </ul>
-
-        <p>
-          Although they established new homes there, most
-          retained strong ties with their place of origin,
-          regularly visiting Ričice and maintaining family
-          connections.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Overseas Migration</h2>
-
-        <p>
-          During the 20th century, some members of the family
-          also emigrated overseas. The most common destinations
-          were:
-        </p>
-
-        <ul>
-          <li>the United States of America</li>
-          <li>Canada</li>
-          <li>Australia</li>
-        </ul>
-
-        <p>
-          In their new surroundings, families continued to
-          preserve their Croatian identity, customs and
-          awareness of their origins.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Distribution of the Tandara Family Through Time</h2>
-
-        <p>
-          The story of the Tandara family in Ričice begins very
-          modestly. When the first known Tandara, or Tandarić,
-          family was recorded in Netrub in
-          <strong>1725</strong>, it consisted of only
-          <strong>three members</strong>.
-          From this small family nucleus, over the following
-          three centuries, developed a family whose descendants
-          gradually spread from Ričice to other parts of
-          Croatia, neighbouring regions and eventually to
-          countries throughout the world.
-        </p>
-
-        <p>
-          By <strong>1806</strong>, Ričice was home to
-          <strong>three Tandara families with 20 members</strong>,
-          and around fifteen years later Ričice and Zavelim
-          together had
-          <strong>four families with 27 members</strong>.
-          The growth in the number of descendants was accompanied
-          by gradual expansion to new places, most often in
-          search of land, employment and better living
-          conditions.
-        </p>
-
-        <p>
-          A particularly valuable snapshot is provided by the
-          situation in <strong>1948</strong>. At that time,
-          Croatia had
-          <strong>21 Tandara families with 107 members</strong>,
-          distributed across nine locations. Most still lived
-          in Ričice —
-          <strong>12 families and 69 people</strong> —
-          while other families were already living in Zagreb,
-          Split, Kutjevo, Podravska Slatina, the Bjelovar area,
-          Đakovo and elsewhere.
-        </p>
-
-
-        <h3>Table 1: Tandara Families in Croatia in 1948</h3>
-
-        <table class="migration-table">
-
-          <thead>
-            <tr>
-              <th scope="col">Place</th>
-              <th scope="col">Number of families</th>
-              <th scope="col">Number of members</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr><td>Bektež near Kutjevo</td><td>1</td><td>5</td></tr>
-            <tr><td>Kutjevo</td><td>1</td><td>4</td></tr>
-            <tr><td>Martinec near Čazma</td><td>—</td><td>2</td></tr>
-            <tr><td>Podravska Slatina</td><td>1</td><td>8</td></tr>
-            <tr><td>Prgomelj near Bjelovar</td><td>1</td><td>8</td></tr>
-            <tr><td>Ričice</td><td>12</td><td>69</td></tr>
-            <tr><td>Split</td><td>1</td><td>1</td></tr>
-            <tr><td>Strizivojna near Đakovo</td><td>1</td><td>5</td></tr>
-            <tr><td>Zagreb</td><td>3</td><td>5</td></tr>
-
-            <tr>
-              <th scope="row">Total</th>
-              <th>21</th>
-              <th>107</th>
-            </tr>
-          </tbody>
-
-        </table>
-
-
-        <p>
-          Sixty years later, the picture had changed
-          considerably. According to data for
-          <strong>2008</strong>, Croatia had
-          <strong>
-            104 Tandara families with a total of 317 members
-          </strong>,
-          distributed across <strong>32 places</strong>.
-          Zagreb had 24 families and 73 members, Ričice had
-          8 families and 35 members, and Split had 11 families
-          and 35 members. These figures show that the formerly
-          strong concentration of the family in its original
-          area had developed during the 20th century into a
-          much broader distribution across Croatia.
-        </p>
-
-
-        <h3>Table 2: Tandara Families in Croatia in 2008</h3>
-
-        <table class="migration-table">
-
-          <thead>
-            <tr>
-              <th scope="col">Place</th>
-              <th scope="col">Number of families</th>
-              <th scope="col">Number of members</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr><td>Bektež near Kutjevo</td><td>2</td><td>3</td></tr>
-            <tr><td>Bjelovar</td><td>5</td><td>13</td></tr>
-            <tr><td>Drnje</td><td>1</td><td>2</td></tr>
-            <tr><td>Dugo Selo</td><td>1</td><td>2</td></tr>
-            <tr><td>Đakovo</td><td>7</td><td>22</td></tr>
-            <tr><td>Gornji Karin near Obrovac</td><td>1</td><td>1</td></tr>
-            <tr><td>Imotski</td><td>1</td><td>3</td></tr>
-            <tr><td>Ivanec</td><td>1</td><td>3</td></tr>
-            <tr><td>Kamen near Split</td><td>1</td><td>3</td></tr>
-            <tr><td>Kaštel Stari</td><td>2</td><td>5</td></tr>
-            <tr><td>Klokočevac</td><td>3</td><td>11</td></tr>
-            <tr><td>Kozinščak near Dugo Selo</td><td>1</td><td>5</td></tr>
-            <tr><td>Križevci</td><td>1</td><td>4</td></tr>
-            <tr><td>Kutjevo</td><td>2</td><td>7</td></tr>
-            <tr><td>Nuštar</td><td>1</td><td>1</td></tr>
-            <tr><td>Podstrana</td><td>3</td><td>11</td></tr>
-            <tr><td>Predavac</td><td>9</td><td>25</td></tr>
-            <tr><td>Punat</td><td>1</td><td>2</td></tr>
-            <tr><td>Ričice</td><td>8</td><td>35</td></tr>
-            <tr><td>Rijeka</td><td>1</td><td>1</td></tr>
-            <tr><td>Sesvete</td><td>1</td><td>3</td></tr>
-            <tr><td>Sisak</td><td>2</td><td>5</td></tr>
-            <tr><td>Slatina</td><td>1</td><td>1</td></tr>
-            <tr><td>Slavonski Brod</td><td>1</td><td>1</td></tr>
-            <tr><td>Split</td><td>11</td><td>35</td></tr>
-            <tr><td>Stinica near Senj</td><td>1</td><td>2</td></tr>
-            <tr><td>Stobreč</td><td>5</td><td>20</td></tr>
-            <tr><td>Strizivojna</td><td>2</td><td>5</td></tr>
-            <tr><td>Vinkovci</td><td>1</td><td>4</td></tr>
-            <tr><td>Vrpolje</td><td>1</td><td>4</td></tr>
-            <tr><td>Vukovar</td><td>2</td><td>5</td></tr>
-            <tr><td>Zagreb</td><td>24</td><td>73</td></tr>
-
-            <tr>
-              <th scope="row">Total</th>
-              <th>104</th>
-              <th>317</th>
-            </tr>
-          </tbody>
-
-        </table>
-
-
-        <div
-          class="migration-map-section"
-          aria-labelledby="osm2-en-title"
-        >
-
-          <h3 id="osm2-en-title">
-            OpenStreetMap 2: Distribution of Tandara Families
-            in Croatia in 2008
-          </h3>
-
-          <p>
-            Click a place marker. The numbers in brackets show
-            the number of families and family members according
-            to the 2008 table.
-          </p>
-
-          <div
-            id="tandara-croatia-map"
-            class="migration-map"
-            aria-label="Map of the distribution of Tandara families in Croatia in 2008"
-          ></div>
-
-        </div>
-
-
-        <p>
-          According to the information currently available
-          to the project for <strong>2026</strong>, Croatia
-          alone is home to
-          <strong>
-            more than 105 Tandara families with more than
-            330 members
-          </strong>.
-          At the same time, it is estimated that
-          <strong>
-            approximately the same number of Tandaras live
-            outside Croatia as within Croatia
-          </strong>.
-          This estimate includes descendants and family
-          branches distributed across several countries and
-          should be regarded as a working estimate because
-          equally complete and comparable official data are
-          not available for every country.
-        </p>
-
-
-        <div
-          class="migration-map-section"
-          aria-labelledby="osm3-en-title"
-        >
-
-          <h3 id="osm3-en-title">
-            OpenStreetMap 3: Present-Day Distribution of the
-            Tandara Family Outside Croatia
-          </h3>
-
-          <p>
-            The map shows only the locations and countries
-            listed in the currently available genealogical
-            HTML data for the
-            <strong>Croatian Tandara family</strong>.
-            Where a city or village is known, the marker is
-            placed at that location. Where only the country
-            is known, the marker is placed approximately at
-            its geographical centre.
-          </p>
-
-          <p>
-            The figures accompanying the markers are not an
-            official population census, but a
-            <strong>
-              working record derived from the genealogical
-              information currently collected
-            </strong>.
-            Where the available information does not allow
-            the number of families or members to be established
-            reliably, this is stated explicitly in the marker
-            instead of estimating a number.
-          </p>
-
-          <p>
-            <strong>
-              Romanian and Slovak Tandaras are not included
-              on this map
-            </strong>,
-            because research carried out so far has not
-            confirmed a common origin or genealogical
-            relationship with the Croatian Tandara family.
-            Likewise, Australian place-names, hotels and other
-            entities named “Tandara” are not part of this map;
-            the Australian marker refers exclusively to
-            Australia as a recorded destination of emigration
-            by members of the Croatian Tandara family.
-          </p>
-
-          <div
-            id="tandara-world-map"
-            class="migration-map"
-            aria-label="Map of the present-day distribution of the Croatian Tandara family outside Croatia"
-          ></div>
-
-        </div>
-
-
-        <p>
-          These figures do not speak only about demographic
-          growth. They also show the
-          <strong>
-            migration journey of one family across three centuries
-          </strong>:
-          from one three-member family in Netrub, through
-          gradual expansion within Croatia, to present-day
-          generations living in different countries and on
-          different continents. Every new location on this
-          map represents a new family story, a new branch and
-          a continuation of the same common root.
-        </p>
-
-        <p>
-          <strong>
-            From three members of a single family in 1725
-            to several hundred descendants three centuries
-            later — this continuity and distribution show
-            more clearly than anything else how migration
-            shaped the Tandara family as it exists today.
-          </strong>
-        </p>
-
-        <p>
-          <small>
-            Sources for the historical tables:
-            <em>
-              Leksik prezimena Socijalističke Republike Hrvatske
-            </em>,
-            Zagreb, 1976 (data for 1948); Franjo Maletić and
-            Petar Šimunović,
-            <em>
-              Hrvatski prezimenik: Pučanstvo Republike Hrvatske
-              na početku 21. stoljeća
-            </em>
-            (data for 2008). The data and estimate for 2026
-            are based on information currently collected by
-            the project.
-          </small>
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>How Migration Routes Are Verified</h2>
-
-        <p>
-          The mere appearance of the same surname in a new
-          place is not sufficient to prove that a person
-          belongs to a particular family branch. More reliable
-          connections are established by examining family
-          relationships, the sequence of generations, places
-          of birth and marriage, family tradition and other
-          available records.
-        </p>
-
-        <p>
-          For this reason, both the map and the text distinguish
-          documented migration routes from directions that
-          still remain research hypotheses.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Present-Day Connections Between Dispersed Branches</h2>
-
-        <p>
-          Modern communication makes it possible for descendants
-          of distant branches to reconnect, exchange photographs
-          and documents, and compare family information. Such
-          contacts can help fill gaps that cannot be resolved
-          from older archival sources in only one location.
-        </p>
-
-      </section>
-
-
-      <section>
-
-        <h2>Conclusion</h2>
-
-        <p>
-          The migrations of the Tandara family can be viewed
-          as a series of connected routes beginning in Ričice
-          and leading towards neighbouring areas, other parts
-          of Croatia, Bosnia and Herzegovina, Western Europe
-          and overseas countries.
-        </p>
-
-        <p>
-          This page therefore does not serve as a second
-          genealogy, but as the geographical layer of family
-          history: it shows where individual branches moved
-          and which connections still require confirmation
-          through additional documentation.
-        </p>
-
-      </section>
-
-    </article>
-
-  </main>
-
-
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin="anonymous"
-  ></script>
-
-
-  <script>
-    (() => {
-      "use strict";
-
-      if (!window.L) {
-        return;
-      }
-
-      const tiles =
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-
-      const attribution =
-        '&copy; <a href="https://www.openstreetmap.org/copyright">' +
-        "OpenStreetMap</a> contributors";
-
-      const createMap = (id, center, zoom) => {
-        const element = document.getElementById(id);
-
-        if (!element) {
-          return null;
-        }
-
-        const map = L.map(element).setView(center, zoom);
-
-        L.tileLayer(tiles, {
-          attribution
-        }).addTo(map);
-
-        return map;
-      };
-
-
-      const riciceMap = createMap(
-        "ricice-map",
-        [43.51347, 17.11103],
-        11
-      );
-
-      if (riciceMap) {
-        L.marker([43.51347, 17.11103])
-          .addTo(riciceMap)
-          .bindPopup("Ričice")
-          .bindTooltip("Ričice", {
-            permanent: true,
-            direction: "bottom",
-            offset: [0, 10],
-            opacity: 0.95,
-            className: "ricice-label-no-arrow"
-          });
-
-        L.marker([43.543333, 17.125556])
-          .addTo(riciceMap)
-          .bindPopup("Tandare, Zavelim");
-
-        L.marker([43.8249858, 17.0076892])
-          .addTo(riciceMap)
-          .bindPopup("Livno");
-      }
-
-
-      const croatiaMap = createMap(
-        "tandara-croatia-map",
-        [45.25, 16.65],
-        7
-      );
-
-      if (croatiaMap) {
-
-        const croatiaData = [
-
-          [
-            45.39806,
-            17.92583,
-            "Bektež near Kutjevo (2 families, 3 members)"
-          ],
-
-          [
-            45.89864,
-            16.84892,
-            "Bjelovar (5 families, 13 members)"
-          ],
-
-          [
-            46.20694,
-            16.91694,
-            "Drnje (1 family, 2 members)"
-          ],
-
-          [
-            45.80583,
-            16.24417,
-            "Dugo Selo (1 family, 2 members)"
-          ],
-
-          [
-            45.30833,
-            18.41056,
-            "Đakovo (7 families, 22 members)"
-          ],
-
-          [
-            44.13598,
-            15.63423,
-            "Gornji Karin near Obrovac (1 family, 1 member)"
-          ],
-
-          [
-            43.44667,
-            17.21667,
-            "Imotski (1 family, 3 members)"
-          ],
-
-          [
-            46.22306,
-            16.12028,
-            "Ivanec (1 family, 3 members)"
-          ],
-
-          [
-            43.51420,
-            16.51470,
-            "Kamen near Split (1 family, 3 members)"
-          ],
-
-          [
-            43.55357,
-            16.34831,
-            "Kaštel Stari (2 families, 5 members)"
-          ],
-
-          [
-            45.91837,
-            16.78667,
-            "Klokočevac (3 families, 11 members)"
-          ],
-
-          [
-            45.81484,
-            16.26053,
-            "Kozinščak near Dugo Selo (1 family, 5 members)"
-          ],
-
-          [
-            46.02194,
-            16.54250,
-            "Križevci (1 family, 4 members)"
-          ],
-
-          [
-            45.42611,
-            17.88222,
-            "Kutjevo (2 families, 7 members)"
-          ],
-
-          [
-            45.33250,
-            18.84111,
-            "Nuštar (1 family, 1 member)"
-          ],
-
-          [
-            43.48668,
-            16.55013,
-            "Podstrana (3 families, 11 members)"
-          ],
-
-          [
-            45.93583,
-            16.78333,
-            "Predavac (9 families, 25 members)"
-          ],
-
-          [
-            45.02083,
-            14.62889,
-            "Punat (1 family, 2 members)"
-          ],
-
-          [
-            43.51347,
-            17.11103,
-            "Ričice (8 families, 35 members)"
-          ],
-
-          [
-            45.32706,
-            14.44218,
-            "Rijeka (1 family, 1 member)"
-          ],
-
-          [
-            45.83111,
-            16.11639,
-            "Sesvete (1 family, 3 members)"
-          ],
-
-          [
-            45.48722,
-            16.37611,
-            "Sisak (2 families, 5 members)"
-          ],
-
-          [
-            45.70333,
-            17.70278,
-            "Slatina (1 family, 1 member)"
-          ],
-
-          [
-            45.16028,
-            18.01556,
-            "Slavonski Brod (1 family, 1 member)"
-          ],
-
-          [
-            43.50813,
-            16.44019,
-            "Split (11 families, 35 members)"
-          ],
-
-          [
-            44.71998,
-            14.89672,
-            "Stinica near Senj (1 family, 2 members)"
-          ],
-
-          [
-            43.50250,
-            16.52222,
-            "Stobreč (5 families, 20 members)"
-          ],
-
-          [
-            45.22592,
-            18.42881,
-            "Strizivojna (2 families, 5 members)"
-          ],
-
-          [
-            45.28833,
-            18.80472,
-            "Vinkovci (1 family, 4 members)"
-          ],
-
-          [
-            45.21024,
-            18.40528,
-            "Vrpolje (1 family, 4 members)"
-          ],
-
-          [
-            45.35161,
-            19.00225,
-            "Vukovar (2 families, 5 members)"
-          ],
-
-          [
-            45.81501,
-            15.98192,
-            "Zagreb (24 families, 73 members)"
-          ]
-
-        ];
-
-
-        const markers = croatiaData.map(
-          ([lat, lng, popup]) =>
-            L.marker([lat, lng]).bindPopup(popup)
-        );
-
-
-        const group =
-          L.featureGroup(markers)
-            .addTo(croatiaMap);
-
-
-        croatiaMap.fitBounds(
-          group.getBounds().pad(0.08)
-        );
-
-      }
-
-
-      const worldMap = createMap(
-        "tandara-world-map",
-        [45, 12],
-        3
-      );
-
-
-      if (worldMap) {
-
-        const worldData = [
-
-          [
-            43.543333,
-            17.125556,
-            "<b>Tandare, Zavelim — Bosnia and Herzegovina</b><br>" +
-            "2 recorded family units; at least 5 explicitly " +
-            "located members."
-          ],
-
-          [
-            43.4728,
-            17.3262,
-            "<b>Posušje — Bosnia and Herzegovina</b><br>" +
-            "2 recorded families + 1 separately located member; " +
-            "at least 3 explicitly located people. The complete " +
-            "number has not been established."
-          ],
-
-          [
-            43.8563,
-            18.4131,
-            "<b>Sarajevo — Bosnia and Herzegovina</b><br>" +
-            "2 recorded family units; 6 named members in the " +
-            "available records."
-          ],
-
-          [
-            43.8249858,
-            17.0076892,
-            "<b>Livno — Bosnia and Herzegovina</b><br>" +
-            "The available data confirm that descendants of the " +
-            "family live in the Livno area today; the number of " +
-            "families and members has not been established."
-          ],
-
-          [
-            46.3592,
-            15.1103,
-            "<b>Velenje — Slovenia</b><br>" +
-            "2 recorded families; 8 named members in the " +
-            "available records."
-          ],
-
-          [
-            48.1351,
-            11.5820,
-            "<b>Munich — Germany</b><br>" +
-            "1 family; 2 members explicitly located in Munich."
-          ],
-
-          [
-            52.5200,
-            13.4050,
-            "<b>Berlin — Germany</b><br>" +
-            "1 explicitly located family member."
-          ],
-
-          [
-            52.0302,
-            8.5325,
-            "<b>Bielefeld — Germany</b><br>" +
-            "2 recorded families; 7 named members in the " +
-            "available records."
-          ],
-
-          [
-            51.1657,
-            10.4515,
-            "<b>Germany — exact location not specified</b><br>" +
-            "6 recorded families + 1 separately listed member; " +
-            "25 named people. The text also mentions additional " +
-            "branches in Germany without sufficient information " +
-            "for reliable counting."
-          ],
-
-          [
-            48.2082,
-            16.3738,
-            "<b>Vienna — Austria</b><br>" +
-            "1 recorded family + 1 separately located member; " +
-            "5 named people in total."
-          ],
-
-          [
-            47.5162,
-            14.5501,
-            "<b>Austria — additional location not specified</b><br>" +
-            "The genealogical text mentions at least 1 additional " +
-            "branch in Austria; the number of members has not " +
-            "been established."
-          ],
-
-          [
-            46.8182,
-            8.2275,
-            "<b>Switzerland — location not specified</b><br>" +
-            "1 recorded family; 4 named members."
-          ],
-
-          [
-            51.9194,
-            19.1451,
-            "<b>Poland — location not specified</b><br>" +
-            "1 explicitly listed member of the family " +
-            "(Nikola Tandara)."
-          ],
-
-          [
-            51.5074,
-            -0.1278,
-            "<b>London — United Kingdom</b><br>" +
-            "1 recorded family; 4 named members."
-          ],
-
-          [
-            56.1304,
-            -106.3468,
-            "<b>Canada — location not specified</b><br>" +
-            "1 recorded family; 4 named members."
-          ],
-
-          [
-            39.8283,
-            -98.5795,
-            "<b>United States of America — location not specified</b><br>" +
-            "1 recorded family; 4 named members."
-          ],
-
-          [
-            -25.2744,
-            133.7751,
-            "<b>Australia — location not specified</b><br>" +
-            "Australia is listed as a destination of emigration " +
-            "for members of the Croatian Tandara family; the " +
-            "number of families and members has not been " +
-            "established from the available HTML data."
-          ]
-
-        ];
-
-
-        const markers = worldData.map(
-          ([lat, lng, popup]) =>
-            L.marker([lat, lng]).bindPopup(popup)
-        );
-
-
-        const group =
-          L.featureGroup(markers)
-            .addTo(worldMap);
-
-
-        worldMap.fitBounds(
-          group.getBounds().pad(0.10)
-        );
-
-      }
-
-    })();
-  </script>
+<main class="content-page">
+<article class="content-card">
+
+<h1>Migration and Distribution of the Tandara Family</h1>
+
+<section>
+<h2>Introduction</h2>
+<p>
+This chapter follows the movement of individual
+branches of the Tandara family after they had become
+established in their original area. Rather than
+repeating the history of the surname's origin, the
+emphasis is on migration routes, the periods in which
+these movements can be traced, and the places where
+new family centres developed.
+</p>
+
+<p>
+Ričice remains the starting point of this presentation,
+while every later location is viewed as part of a
+migration path that should be connected with a specific
+family branch and the available sources.
+</p>
+</section>
+
+<section>
+<h2>Ričice – the Family's Place of Origin</h2>
+
+<p>
+The earliest reliably known centre of the family is
+Ričice in the Imotski region. It is here that, during
+the first half of the 18th century, the development
+of the family from which the later branches emerged
+can be followed.
+</p>
+
+<p>
+For centuries, Ričice was more than simply a place
+of residence. It represents the point of origin from
+which individual family members gradually moved
+towards neighbouring areas while maintaining an
+awareness of their common ancestry.
+</p>
+</section>
+
+<section class="migration-map-section" aria-labelledby="osm1-en-title">
+<h2 id="osm1-en-title">OpenStreetMap 1: Ričice – Origin of the Surname</h2>
+<div id="ricice-map" class="migration-map migration-map--ricice" aria-label="Map of Ričice, Zavelim and Livno"></div>
+</section>
+
+<section class="migracije-ricice-media" aria-labelledby="ricice-views-title">
+<h2 id="ricice-views-title">Ričice Through the Seasons and from Different Perspectives</h2>
+
+<div class="migracije-ricice-gallery">
+
+<figure class="migracije-ricice-item">
+<img src="../tandara-common/slike/ricice/ricice1.jpg"
+alt="Ričice and Green Lake from the air – Vice Tandara"
+loading="lazy" decoding="async">
+<figcaption>Ričice and Green Lake from the air – Vice Tandara</figcaption>
+</figure>
+
+<figure class="migracije-ricice-item">
+<img src="../tandara-common/slike/ricice/ricice5.jpg"
+alt="Green Lake in winter, viewed from higher ground"
+loading="lazy" decoding="async">
+<figcaption>Green Lake in winter – view from higher ground</figcaption>
+</figure>
+
+<figure class="migracije-ricice-item">
+<img src="../tandara-common/slike/ricice/ricice6.jpg"
+alt="Ričice and Green Lake in the green summer landscape"
+loading="lazy" decoding="async">
+<figcaption>Ričice and Green Lake in the green summer landscape</figcaption>
+</figure>
+
+</div>
+</section>
+
+<section>
+<h2>Expansion Within the Imotski Region</h2>
+
+<p>
+During the 18th and 19th centuries, the number of
+family members gradually increased. As new households
+were formed, some families moved to nearby places in
+search of cultivable land, an opportunity to establish
+their own homes, or better economic conditions.
+</p>
+
+<p>
+Such migrations were common among almost all families
+of the Imotski region and represented a natural
+continuation of demographic development.
+</p>
+</section>
+
+<section>
+<h2>Expansion Towards Zavelim, Tomislavgrad and Livno</h2>
+
+<p>
+The first reliably documented expansion of the
+Tandara surname beyond Ričice is connected with the
+Zavelim area, a broad region containing around ten
+villages. Among them is the village of Tandara,
+named after the first settlers from Ričice —
+members of the Tandara family.
+</p>
+
+<p>
+Between 1806 and 1819, construction of the first
+houses in this area began, followed by the gradual
+relocation of two families from Ričice. According
+to family tradition and research carried out so far,
+these were the family of Ante Antin, ancestor of
+the Lovro branch and later the Križan branch, and
+the family of Martin Petrov, ancestor of the Toma
+branch and the Tromić line. Their arrival marked the
+formation of the Zavelim branch of the Tandara family,
+a direct continuation of the original Ričice line.
+</p>
+
+<p>
+The Zavelim branch played a key role in preserving
+the surname, family identity and lasting connection
+with the roots in Ričice. The arrival of these
+families created a new family centre from which
+additional family lines later developed.
+</p>
+
+<p>
+A second expansion of the Tandara family most likely
+led towards the Tomislavgrad area. From there, some
+families moved to Livno, where their descendants
+still live today. The Tandara families of Livno will
+be presented in a separate chapter entitled
+<strong>The Livno Tandaras</strong>.
+</p>
+</section>
+
+<section>
+<h2>Emigration to Europe</h2>
+
+<p>
+The second half of the 20th century brought a new
+wave of migration. Economic circumstances led many
+families to leave temporarily or permanently for work
+in Western European countries.
+</p>
+
+<p>The largest numbers settled in:</p>
+
+<ul>
+<li>Germany</li>
+<li>Austria</li>
+<li>Switzerland</li>
+<li>the United Kingdom</li>
+</ul>
+
+<p>
+Although they established new homes there, most
+retained strong ties with their place of origin,
+regularly visiting Ričice and maintaining family
+connections.
+</p>
+</section>
+
+<section>
+<h2>Overseas Migration</h2>
+
+<p>
+During the 20th century, some members of the family
+also emigrated overseas. The most common destinations
+were:
+</p>
+
+<ul>
+<li>the United States of America</li>
+<li>Canada</li>
+<li>Australia</li>
+</ul>
+
+<p>
+In their new surroundings, families continued to
+preserve their Croatian identity, customs and
+awareness of their origins.
+</p>
+</section>
+
+<section>
+<h2>Distribution of the Tandara Family Through Time</h2>
+
+<p>
+The story of the Tandara family in Ričice begins very
+modestly. When the first known Tandara, or Tandarić,
+family was recorded in Netrub in
+<strong>1725</strong>, it consisted of only
+<strong>three members</strong>.
+From this small family nucleus, over the following
+three centuries, developed a family whose descendants
+gradually spread from Ričice to other parts of
+Croatia, neighbouring regions and eventually to
+countries throughout the world.
+</p>
+
+<p>
+By <strong>1806</strong>, Ričice was home to
+<strong>three Tandara families with 20 members</strong>,
+and around fifteen years later Ričice and Zavelim
+together had
+<strong>four families with 27 members</strong>.
+The growth in the number of descendants was accompanied
+by gradual expansion to new places, most often in
+search of land, employment and better living
+conditions.
+</p>
+
+<p>
+A particularly valuable snapshot is provided by the
+situation in <strong>1948</strong>. At that time,
+Croatia had
+<strong>21 Tandara families with 107 members</strong>,
+distributed across nine locations. Most still lived
+in Ričice —
+<strong>12 families and 69 people</strong> —
+while other families were already living in Zagreb,
+Split, Kutjevo, Podravska Slatina, the Bjelovar area,
+Đakovo and elsewhere.
+</p>
+
+<h3>Table 1: Tandara Families in Croatia in 1948</h3>
+
+<table class="migration-table">
+<thead>
+<tr>
+<th scope="col">Place</th>
+<th scope="col">Number of families</th>
+<th scope="col">Number of members</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>Bektež near Kutjevo</td><td>1</td><td>5</td></tr>
+<tr><td>Kutjevo</td><td>1</td><td>4</td></tr>
+<tr><td>Martinec near Čazma</td><td>—</td><td>2</td></tr>
+<tr><td>Podravska Slatina</td><td>1</td><td>8</td></tr>
+<tr><td>Prgomelj near Bjelovar</td><td>1</td><td>8</td></tr>
+<tr><td>Ričice</td><td>12</td><td>69</td></tr>
+<tr><td>Split</td><td>1</td><td>1</td></tr>
+<tr><td>Strizivojna near Đakovo</td><td>1</td><td>5</td></tr>
+<tr><td>Zagreb</td><td>3</td><td>5</td></tr>
+<tr><th scope="row">Total</th><th>21</th><th>107</th></tr>
+</tbody>
+</table>
+
+<p>
+Sixty years later, the picture had changed
+considerably. According to data for
+<strong>2008</strong>, Croatia had
+<strong>104 Tandara families with a total of 317 members</strong>,
+distributed across <strong>32 places</strong>.
+Zagreb had 24 families and 73 members, Ričice had
+8 families and 35 members, and Split had 11 families
+and 35 members. These figures show that the formerly
+strong concentration of the family in its original
+area had developed during the 20th century into a
+much broader distribution across Croatia.
+</p>
+
+<h3>Table 2: Tandara Families in Croatia in 2008</h3>
+
+<table class="migration-table">
+<thead>
+<tr>
+<th scope="col">Place</th>
+<th scope="col">Number of families</th>
+<th scope="col">Number of members</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>Bektež near Kutjevo</td><td>2</td><td>3</td></tr>
+<tr><td>Bjelovar</td><td>5</td><td>13</td></tr>
+<tr><td>Drnje</td><td>1</td><td>2</td></tr>
+<tr><td>Dugo Selo</td><td>1</td><td>2</td></tr>
+<tr><td>Đakovo</td><td>7</td><td>22</td></tr>
+<tr><td>Gornji Karin near Obrovac</td><td>1</td><td>1</td></tr>
+<tr><td>Imotski</td><td>1</td><td>3</td></tr>
+<tr><td>Ivanec</td><td>1</td><td>3</td></tr>
+<tr><td>Kamen near Split</td><td>1</td><td>3</td></tr>
+<tr><td>Kaštel Stari</td><td>2</td><td>5</td></tr>
+<tr><td>Klokočevac</td><td>3</td><td>11</td></tr>
+<tr><td>Kozinščak near Dugo Selo</td><td>1</td><td>5</td></tr>
+<tr><td>Križevci</td><td>1</td><td>4</td></tr>
+<tr><td>Kutjevo</td><td>2</td><td>7</td></tr>
+<tr><td>Nuštar</td><td>1</td><td>1</td></tr>
+<tr><td>Podstrana</td><td>3</td><td>11</td></tr>
+<tr><td>Predavac</td><td>9</td><td>25</td></tr>
+<tr><td>Punat</td><td>1</td><td>2</td></tr>
+<tr><td>Ričice</td><td>8</td><td>35</td></tr>
+<tr><td>Rijeka</td><td>1</td><td>1</td></tr>
+<tr><td>Sesvete</td><td>1</td><td>3</td></tr>
+<tr><td>Sisak</td><td>2</td><td>5</td></tr>
+<tr><td>Slatina</td><td>1</td><td>1</td></tr>
+<tr><td>Slavonski Brod</td><td>1</td><td>1</td></tr>
+<tr><td>Split</td><td>11</td><td>35</td></tr>
+<tr><td>Stinica near Senj</td><td>1</td><td>2</td></tr>
+<tr><td>Stobreč</td><td>5</td><td>20</td></tr>
+<tr><td>Strizivojna</td><td>2</td><td>5</td></tr>
+<tr><td>Vinkovci</td><td>1</td><td>4</td></tr>
+<tr><td>Vrpolje</td><td>1</td><td>4</td></tr>
+<tr><td>Vukovar</td><td>2</td><td>5</td></tr>
+<tr><td>Zagreb</td><td>24</td><td>73</td></tr>
+<tr><th scope="row">Total</th><th>104</th><th>317</th></tr>
+</tbody>
+</table>
+
+<div class="migration-map-section" aria-labelledby="osm2-en-title">
+<h3 id="osm2-en-title">
+OpenStreetMap 2: Distribution of Tandara Families
+in Croatia in 2008
+</h3>
+
+<p>
+Click a place marker. The numbers in brackets show
+the number of families and family members according
+to the 2008 table.
+</p>
+
+<div id="tandara-croatia-map"
+class="migration-map"
+aria-label="Map of the distribution of Tandara families in Croatia in 2008"></div>
+</div>
+
+<p>
+According to the information currently available
+to the project for <strong>2026</strong>, Croatia
+alone is home to
+<strong>more than 105 Tandara families with more than
+330 members</strong>.
+At the same time, it is estimated that
+<strong>approximately the same number of Tandaras live
+outside Croatia as within Croatia</strong>.
+This estimate includes descendants and family
+branches distributed across several countries and
+should be regarded as a working estimate because
+equally complete and comparable official data are
+not available for every country.
+</p>
+
+<div class="migration-map-section" aria-labelledby="osm3-en-title">
+<h3 id="osm3-en-title">
+OpenStreetMap 3: Present-Day Distribution of the
+Tandara Family Outside Croatia
+</h3>
+
+<p>
+The map shows only the locations and countries
+listed in the currently available genealogical
+HTML data for the
+<strong>Croatian Tandara family</strong>.
+Where a city or village is known, the marker is
+placed at that location. Where only the country
+is known, the marker is placed approximately at
+its geographical centre.
+</p>
+
+<p>
+The figures accompanying the markers are not an
+official population census, but a
+<strong>working record derived from the genealogical
+information currently collected</strong>.
+Where the available information does not allow
+the number of families or members to be established
+reliably, this is stated explicitly in the marker
+instead of estimating a number.
+</p>
+
+<p>
+<strong>Romanian and Slovak Tandaras are not included
+on this map</strong>,
+because research carried out so far has not
+confirmed a common origin or genealogical
+relationship with the Croatian Tandara family.
+Likewise, Australian place-names, hotels and other
+entities named “Tandara” are not part of this map;
+the Australian marker refers exclusively to
+Australia as a recorded destination of emigration
+by members of the Croatian Tandara family.
+</p>
+
+<div id="tandara-world-map"
+class="migration-map"
+aria-label="Map of the present-day distribution of the Croatian Tandara family outside Croatia"></div>
+</div>
+
+<p>
+These figures do not speak only about demographic
+growth. They also show the
+<strong>migration journey of one family across three centuries</strong>:
+from one three-member family in Netrub, through
+gradual expansion within Croatia, to present-day
+generations living in different countries and on
+different continents. Every new location on this
+map represents a new family story, a new branch and
+a continuation of the same common root.
+</p>
+
+<p>
+<strong>
+From three members of a single family in 1725
+to several hundred descendants three centuries
+later — this continuity and distribution show
+more clearly than anything else how migration
+shaped the Tandara family as it exists today.
+</strong>
+</p>
+
+<p>
+<small>
+Sources for the historical tables:
+<em>Leksik prezimena Socijalističke Republike Hrvatske</em>,
+Zagreb, 1976 (data for 1948); Franjo Maletić and
+Petar Šimunović,
+<em>Hrvatski prezimenik: Pučanstvo Republike Hrvatske
+na početku 21. stoljeća</em>
+(data for 2008). The data and estimate for 2026
+are based on information currently collected by
+the project.
+</small>
+</p>
+</section>
+
+<section>
+<h2>How Migration Routes Are Verified</h2>
+
+<p>
+The mere appearance of the same surname in a new
+place is not sufficient to prove that a person
+belongs to a particular family branch. More reliable
+connections are established by examining family
+relationships, the sequence of generations, places
+of birth and marriage, family tradition and other
+available records.
+</p>
+
+<p>
+For this reason, both the map and the text distinguish
+documented migration routes from directions that
+still remain research hypotheses.
+</p>
+</section>
+
+<section>
+<h2>Present-Day Connections Between Dispersed Branches</h2>
+
+<p>
+Modern communication makes it possible for descendants
+of distant branches to reconnect, exchange photographs
+and documents, and compare family information. Such
+contacts can help fill gaps that cannot be resolved
+from older archival sources in only one location.
+</p>
+</section>
+
+<section>
+<h2>Conclusion</h2>
+
+<p>
+The migrations of the Tandara family can be viewed
+as a series of connected routes beginning in Ričice
+and leading towards neighbouring areas, other parts
+of Croatia, Bosnia and Herzegovina, Western Europe
+and overseas countries.
+</p>
+
+<p>
+This page therefore does not serve as a second
+genealogy, but as the geographical layer of family
+history: it shows where individual branches moved
+and which connections still require confirmation
+through additional documentation.
+</p>
+</section>
+
+</article>
+</main>
+
+<script
+src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin="anonymous"></script>
+
+<script>
+(() => {
+"use strict";
+
+if(!window.L)return;
+
+const tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+const attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+const createMap=(id,center,zoom)=>{
+const element=document.getElementById(id);
+if(!element)return null;
+const map=L.map(element).setView(center,zoom);
+L.tileLayer(tiles,{attribution}).addTo(map);
+return map;
+};
+
+const riciceMap=createMap("ricice-map",[43.51347,17.11103],11);
+
+if(riciceMap){
+L.marker([43.51347,17.11103])
+.addTo(riciceMap)
+.bindPopup("Ričice")
+.bindTooltip("Ričice",{
+permanent:true,
+direction:"bottom",
+offset:[0,10],
+opacity:.95,
+className:"ricice-label-no-arrow"
+});
+
+L.marker([43.543333,17.125556])
+.addTo(riciceMap)
+.bindPopup("Tandare, Zavelim");
+
+L.marker([43.8249858,17.0076892])
+.addTo(riciceMap)
+.bindPopup("Livno");
+}
+
+const croatiaMap=createMap("tandara-croatia-map",[45.25,16.65],7);
+
+if(croatiaMap){
+const croatiaData=[
+[45.39806,17.92583,"Bektež near Kutjevo (2 families, 3 members)"],
+[45.89864,16.84892,"Bjelovar (5 families, 13 members)"],
+[46.20694,16.91694,"Drnje (1 family, 2 members)"],
+[45.80583,16.24417,"Dugo Selo (1 family, 2 members)"],
+[45.30833,18.41056,"Đakovo (7 families, 22 members)"],
+[44.13598,15.63423,"Gornji Karin near Obrovac (1 family, 1 member)"],
+[43.44667,17.21667,"Imotski (1 family, 3 members)"],
+[46.22306,16.12028,"Ivanec (1 family, 3 members)"],
+[43.51420,16.51470,"Kamen near Split (1 family, 3 members)"],
+[43.55357,16.34831,"Kaštel Stari (2 families, 5 members)"],
+[45.91837,16.78667,"Klokočevac (3 families, 11 members)"],
+[45.81484,16.26053,"Kozinščak near Dugo Selo (1 family, 5 members)"],
+[46.02194,16.54250,"Križevci (1 family, 4 members)"],
+[45.42611,17.88222,"Kutjevo (2 families, 7 members)"],
+[45.33250,18.84111,"Nuštar (1 family, 1 member)"],
+[43.48668,16.55013,"Podstrana (3 families, 11 members)"],
+[45.93583,16.78333,"Predavac (9 families, 25 members)"],
+[45.02083,14.62889,"Punat (1 family, 2 members)"],
+[43.51347,17.11103,"Ričice (8 families, 35 members)"],
+[45.32706,14.44218,"Rijeka (1 family, 1 member)"],
+[45.83111,16.11639,"Sesvete (1 family, 3 members)"],
+[45.48722,16.37611,"Sisak (2 families, 5 members)"],
+[45.70333,17.70278,"Slatina (1 family, 1 member)"],
+[45.16028,18.01556,"Slavonski Brod (1 family, 1 member)"],
+[43.50813,16.44019,"Split (11 families, 35 members)"],
+[44.71998,14.89672,"Stinica near Senj (1 family, 2 members)"],
+[43.50250,16.52222,"Stobreč (5 families, 20 members)"],
+[45.22592,18.42881,"Strizivojna (2 families, 5 members)"],
+[45.28833,18.80472,"Vinkovci (1 family, 4 members)"],
+[45.21024,18.40528,"Vrpolje (1 family, 4 members)"],
+[45.35161,19.00225,"Vukovar (2 families, 5 members)"],
+[45.81501,15.98192,"Zagreb (24 families, 73 members)"]
+];
+
+const markers=croatiaData.map(([lat,lng,popup])=>
+L.marker([lat,lng]).bindPopup(popup));
+
+const group=L.featureGroup(markers).addTo(croatiaMap);
+croatiaMap.fitBounds(group.getBounds().pad(.08));
+}
+
+const worldMap=createMap("tandara-world-map",[45,12],3);
+
+if(worldMap){
+const worldData=[
+[
+43.543333,
+17.125556,
+"<b>Tandare, Zavelim — Bosnia and Herzegovina</b><br>"+
+"2 recorded family units; at least 5 explicitly "+
+"located members."
+],
+[
+43.4728,
+17.3262,
+"<b>Posušje — Bosnia and Herzegovina</b><br>"+
+"2 recorded families + 1 separately located member; "+
+"at least 3 explicitly located people. The complete "+
+"number has not been established."
+],
+[
+43.8563,
+18.4131,
+"<b>Sarajevo — Bosnia and Herzegovina</b><br>"+
+"2 recorded family units; 6 named members in the "+
+"available records."
+],
+[
+43.8249858,
+17.0076892,
+"<b>Livno — Bosnia and Herzegovina</b><br>"+
+"The available data confirm that descendants of the "+
+"family live in the Livno area today; the number of "+
+"families and members has not been established."
+],
+[
+46.3592,
+15.1103,
+"<b>Velenje — Slovenia</b><br>"+
+"2 recorded families; 8 named members in the "+
+"available records."
+],
+[
+48.1351,
+11.5820,
+"<b>Munich — Germany</b><br>"+
+"1 family; 2 members explicitly located in Munich."
+],
+[
+52.5200,
+13.4050,
+"<b>Berlin — Germany</b><br>"+
+"1 explicitly located family member."
+],
+[
+52.0302,
+8.5325,
+"<b>Bielefeld — Germany</b><br>"+
+"2 recorded families; 7 named members in the "+
+"available records."
+],
+[
+51.1657,
+10.4515,
+"<b>Germany — exact location not specified</b><br>"+
+"6 recorded families + 1 separately listed member; "+
+"25 named people. The text also mentions additional "+
+"branches in Germany without sufficient information "+
+"for reliable counting."
+],
+[
+48.2082,
+16.3738,
+"<b>Vienna — Austria</b><br>"+
+"1 recorded family + 1 separately located member; "+
+"5 named people in total."
+],
+[
+47.5162,
+14.5501,
+"<b>Austria — additional location not specified</b><br>"+
+"The genealogical text mentions at least 1 additional "+
+"branch in Austria; the number of members has not "+
+"been established."
+],
+[
+46.8182,
+8.2275,
+"<b>Switzerland — location not specified</b><br>"+
+"1 recorded family; 4 named members."
+],
+[
+51.9194,
+19.1451,
+"<b>Poland — location not specified</b><br>"+
+"1 explicitly listed member of the family "+
+"(Nikola Tandara)."
+],
+[
+51.5074,
+-0.1278,
+"<b>London — United Kingdom</b><br>"+
+"1 recorded family; 4 named members."
+],
+[
+56.1304,
+-106.3468,
+"<b>Canada — location not specified</b><br>"+
+"1 recorded family; 4 named members."
+],
+[
+39.8283,
+-98.5795,
+"<b>United States of America — location not specified</b><br>"+
+"1 recorded family; 4 named members."
+],
+[
+-25.2744,
+133.7751,
+"<b>Australia — location not specified</b><br>"+
+"Australia is listed as a destination of emigration "+
+"for members of the Croatian Tandara family; the "+
+"number of families and members has not been "+
+"established from the available HTML data."
+]
+];
+
+const markers=worldData.map(([lat,lng,popup])=>
+L.marker([lat,lng]).bindPopup(popup));
+
+const group=L.featureGroup(markers).addTo(worldMap);
+worldMap.fitBounds(group.getBounds().pad(.10));
+}
+})();
+</script>
 
 </body>
 </html>
