@@ -37,6 +37,70 @@
 
   <script defer
           src="../tandara-common/js/branch-page-engine.js?v=20260918-1"></script>
+
+  <style>
+    /* Virtualni ulaz u Filipov dijagram — vizualno usklađen s boxom "Livanjske Tandare". */
+    .filip-diagram-portal{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      width:100%;
+      margin:34px 0 26px;
+      position:relative;
+    }
+
+    .filip-diagram-portal__line{
+      display:block;
+      width:3px;
+      height:54px;
+      background:#7a5a2f;
+      border-radius:2px;
+      margin:0 auto;
+    }
+
+    .filip-diagram-portal__box{
+      width:150px;
+      height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-sizing:border-box;
+
+      background:rgba(248,232,190,.96);
+      border:2px solid #7a5a2f;
+      border-radius:8px;
+      box-shadow:0 3px 8px rgba(0,0,0,.28);
+
+      font-family:Georgia,serif;
+      font-size:13px;
+      font-weight:700;
+      line-height:1.08;
+      text-align:center;
+      color:#3b2a1a;
+      text-decoration:none;
+
+      transition:transform .15s ease, background .15s ease, color .15s ease;
+    }
+
+    .filip-diagram-portal__box:hover,
+    .filip-diagram-portal__box:focus-visible{
+      background:#d4af37;
+      color:#fff;
+      transform:scale(1.04);
+      outline:3px solid rgba(122,90,47,.24);
+      outline-offset:3px;
+    }
+
+    @media(max-width:640px){
+      .filip-diagram-portal__line{height:42px}
+      .filip-diagram-portal__box{
+        width:150px;
+        height:70px;
+      }
+    }
+  </style>
+
 </head>
 
 <body
@@ -61,7 +125,8 @@
   </h1>
 
   <h2 class="branch-root-title" data-person-code="5.0">
-    <strong>5.0. Filip Tandara – začetnik livanjske grane</strong>
+    <strong>5.0. Filip Tandara – začetnik livanjske grane
+      <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
   </h2>
 
   <p>Filip Tandara smatra se začetnikom livanjske grane Tandara. Bio je oženjen Jelom Bralić. Imali su četiri sina: Matu, Juru, Jakova i Ivana.</p>
@@ -86,155 +151,293 @@
 
   <hr class="family-separator">
 
-<h3 data-person-code="5.0">5.0. Filip Tandara</h3>
+<h3 data-person-code="5.0">
+  <strong>5.0. Filip Tandara <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Filip Tandara smatra se začetnikom livanjske grane Tandara. Bio je oženjen Jelom Bralić. Imali su četiri sina: Matu, Juru, Jakova i Ivana. U ovom prikazu označen je kao mogući peti sin Ivana Tandare iz Ričica; ta veza nije dokumentarno potvrđena.</p>
-<h3 data-person-code="5.0-SP-1">5.0-SP-1. Jela Bralić</h3>
+<h3 data-person-code="5.0-SP-1">
+  <strong>5.0-SP-1. Jela Bralić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.1">5.1. Mate Filipov</h3>
+<h3 data-person-code="5.1">
+  <strong>5.1. Mate Filipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Mate, najstariji Filipov sin, oženio se Katom Jazvić. Imali su kćer Jelu.</p>
-<h3 data-person-code="5.1-SP-1">5.1-SP-1. Kata Jazvić</h3>
+<h3 data-person-code="5.1-SP-1">
+  <strong>5.1-SP-1. Kata Jazvić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.1-K1">5.1-K1. Jela Matina</h3>
+<h3 data-person-code="5.1-K1">
+  <strong>5.1-K1. Jela Matina <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Mate Filipova i Kate rođene Jazvić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2">5.2. Jure Filipov (–1804.)</h3>
+<h3 data-person-code="5.2">
+  <strong>5.2. Jure Filipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ 1804.)</span></strong>
+</h3>
 <p>Jure, drugi Filipov sin, oženio se Mandom Matić. Imali su sina Josipa.</p>
-<h3 data-person-code="5.2-SP-1">5.2-SP-1. Manda Matić</h3>
+<h3 data-person-code="5.2-SP-1">
+  <strong>5.2-SP-1. Manda Matić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1">5.2.1. Josip Jurin</h3>
+<h3 data-person-code="5.2.1">
+  <strong>5.2.1. Josip Jurin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Josip, sin Jure Filipova i Mande rođene Matić, vjenčao se 1818. godine s Cvitom Knežević. Imali su sinove Jakova, Ivana i Antuna.</p>
-<h3 data-person-code="5.2.1-SP-1">5.2.1-SP-1. Cvita Knežević</h3>
+<h3 data-person-code="5.2.1-SP-1">
+  <strong>5.2.1-SP-1. Cvita Knežević <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1">5.2.1.1. Jakov Josipov</h3>
+<h3 data-person-code="5.2.1.1">
+  <strong>5.2.1.1. Jakov Josipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov, najstariji Josipov sin, oženio se Ružom Rimac. Imali su sina Josipa.</p>
-<h3 data-person-code="5.2.1.1-SP-1">5.2.1.1-SP-1. Ruža Rimac</h3>
+<h3 data-person-code="5.2.1.1-SP-1">
+  <strong>5.2.1.1-SP-1. Ruža Rimac <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1">5.2.1.1.1. Josip Jakovljev</h3>
+<h3 data-person-code="5.2.1.1.1">
+  <strong>5.2.1.1.1. Josip Jakovljev <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Josip Jakovljev oženio se Anđom Gabrić. Imali su sinove Jozu i Matu te kćeri Anu, Maru i Anđu.</p>
-<h3 data-person-code="5.2.1.1.1-SP-1">5.2.1.1.1-SP-1. Anđa Gabrić</h3>
+<h3 data-person-code="5.2.1.1.1-SP-1">
+  <strong>5.2.1.1.1-SP-1. Anđa Gabrić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1.1">5.2.1.1.1.1. Jozo Josipov (1884.–)</h3>
+<h3 data-person-code="5.2.1.1.1.1">
+  <strong>5.2.1.1.1.1. Jozo Josipov <span class="life-date">(★ 1884. – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jozo se ženio dva puta. U prvom braku s Maricom Mioč imao je sina Antu Božidara. U drugom braku s Katom Pastuh imao je sina Jakova i kćer Anu.</p>
-<h3 data-person-code="5.2.1.1.1.1-SP-1">5.2.1.1.1.1-SP-1. Marica Mioč</h3>
+<h3 data-person-code="5.2.1.1.1.1-SP-1">
+  <strong>5.2.1.1.1.1-SP-1. Marica Mioč <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Prva supruga osobe Jozo Josipov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1.1-SP-2">5.2.1.1.1.1-SP-2. Kata Pastuh</h3>
+<h3 data-person-code="5.2.1.1.1.1-SP-2">
+  <strong>5.2.1.1.1.1-SP-2. Kata Pastuh <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Druga supruga osobe Jozo Josipov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1.1-S1">5.2.1.1.1.1-S1. Ante Božidar Jozin</h3>
+<h3 data-person-code="5.2.1.1.1.1-S1">
+  <strong>5.2.1.1.1.1-S1. Ante Božidar Jozin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ante Božidar bio je sin Joze Josipova i Marice rođene Mioč iz Jozina prvog braka. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.1.1.1-S2">5.2.1.1.1.1-S2. Jakov Jozin</h3>
+<h3 data-person-code="5.2.1.1.1.1-S2">
+  <strong>5.2.1.1.1.1-S2. Jakov Jozin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov je bio sin Joze Josipova i Kate rođene Pastuh iz Jozina drugog braka. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.1.1.1-K1">5.2.1.1.1.1-K1. Ana Jozina</h3>
+<h3 data-person-code="5.2.1.1.1.1-K1">
+  <strong>5.2.1.1.1.1-K1. Ana Jozina <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Joze Josipova iz drugog braka s Katom Pastuh. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1-S1">5.2.1.1.1-S1. Mato Josipov</h3>
+<h3 data-person-code="5.2.1.1.1-S1">
+  <strong>5.2.1.1.1-S1. Mato Josipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Sin Josipa Jakovljeva i Anđe rođene Gabrić. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.1.1-K1">5.2.1.1.1-K1. Ana Josipova</h3>
+<h3 data-person-code="5.2.1.1.1-K1">
+  <strong>5.2.1.1.1-K1. Ana Josipova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Josipa Jakovljeva i Anđe rođene Gabrić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1-K2">5.2.1.1.1-K2. Mara Josipova</h3>
+<h3 data-person-code="5.2.1.1.1-K2">
+  <strong>5.2.1.1.1-K2. Mara Josipova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Josipa Jakovljeva i Anđe rođene Gabrić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.1.1-K3">5.2.1.1.1-K3. Anđa Josipova</h3>
+<h3 data-person-code="5.2.1.1.1-K3">
+  <strong>5.2.1.1.1-K3. Anđa Josipova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Josipa Jakovljeva i Anđe rođene Gabrić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2">5.2.1.2. Ivan Josipov</h3>
+<h3 data-person-code="5.2.1.2">
+  <strong>5.2.1.2. Ivan Josipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ivan, drugi sin Josipa i Cvite rođene Knežević, ženio se dva puta. Prvi put oženio se 1859. godine Ružom Laštrić. Nema zapisa da su imali djece. Drugi put oženio se Anđom Erceg. Imali su sinove Jakova i Stipu.</p>
-<h3 data-person-code="5.2.1.2-SP-1">5.2.1.2-SP-1. Ruža Laštrić</h3>
+<h3 data-person-code="5.2.1.2-SP-1">
+  <strong>5.2.1.2-SP-1. Ruža Laštrić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Prva supruga osobe Ivan Josipov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2-SP-2">5.2.1.2-SP-2. Anđa Erceg</h3>
+<h3 data-person-code="5.2.1.2-SP-2">
+  <strong>5.2.1.2-SP-2. Anđa Erceg <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Druga supruga osobe Ivan Josipov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1">5.2.1.2.1. Jakov Ivanov</h3>
+<h3 data-person-code="5.2.1.2.1">
+  <strong>5.2.1.2.1. Jakov Ivanov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov se 1894. godine u Livnu oženio Ružom Meštrović. Imali su osmero djece: Josipa, Stipu, Ivu, Matka, Maru, Jozu, Milku i Anđu.</p>
-<h3 data-person-code="5.2.1.2.1-SP-1">5.2.1.2.1-SP-1. Ruža Meštrović</h3>
+<h3 data-person-code="5.2.1.2.1-SP-1">
+  <strong>5.2.1.2.1-SP-1. Ruža Meštrović <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1.1">5.2.1.2.1.1. Matko Jakovljev</h3>
+<h3 data-person-code="5.2.1.2.1.1">
+  <strong>5.2.1.2.1.1. Matko Jakovljev <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Matko, najmlađi Jakovljev sin, oženio se Anicom Župčić. Imali su Krešimira i Davorku.</p>
-<h3 data-person-code="5.2.1.2.1.1-SP-1">5.2.1.2.1.1-SP-1. Anica Župčić</h3>
+<h3 data-person-code="5.2.1.2.1.1-SP-1">
+  <strong>5.2.1.2.1.1-SP-1. Anica Župčić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1.1.1">5.2.1.2.1.1.1. Krešimir Matkov</h3>
+<h3 data-person-code="5.2.1.2.1.1.1">
+  <strong>5.2.1.2.1.1.1. Krešimir Matkov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Krešimir se oženio Biserkom Kučak. Imali su potomke; podaci o živim članovima zaštićeni su.</p>
-<h3 data-person-code="5.2.1.2.1.1.1-SP-1">5.2.1.2.1.1.1-SP-1. Biserka Kučak</h3>
+<h3 data-person-code="5.2.1.2.1.1.1-SP-1">
+  <strong>5.2.1.2.1.1.1-SP-1. Biserka Kučak <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1">5.2.1.2.1.1.1.1. Zaštićeni osobni podaci</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1"><strong>5.2.1.2.1.1.1.1. Zaštićeni osobni podaci</strong></h3>
 <p class="public-privacy-note">Osobni podaci nisu javno objavljeni; u javnom prikazu ostaje samo šifra.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1-SP-1">5.2.1.2.1.1.1.1-SP-1. Zaštićeni osobni podaci</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1-SP-1"><strong>5.2.1.2.1.1.1.1-SP-1. Zaštićeni osobni podaci</strong></h3>
 <p class="public-privacy-note">Osobni podaci nisu javno objavljeni; u javnom prikazu ostaje samo šifra.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1-S1">5.2.1.2.1.1.1.1-S1. Zaštićeni osobni podaci</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1-S1"><strong>5.2.1.2.1.1.1.1-S1. Zaštićeni osobni podaci</strong></h3>
 <p class="public-privacy-note">Osobni podaci nisu javno objavljeni; u javnom prikazu ostaje samo šifra.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1-S2">5.2.1.2.1.1.1.1-S2. Zaštićeni osobni podaci</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1-S2"><strong>5.2.1.2.1.1.1.1-S2. Zaštićeni osobni podaci</strong></h3>
 <p class="public-privacy-note">Osobni podaci nisu javno objavljeni; u javnom prikazu ostaje samo šifra.</p>
-<h3 data-person-code="5.2.1.2.1.1.1-K1">5.2.1.2.1.1.1-K1. Gordana Krešimirova</h3>
+<h3 data-person-code="5.2.1.2.1.1.1-K1">
+  <strong>5.2.1.2.1.1.1-K1. Gordana Krešimirova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Krešimira Matkova i Biserke rođene Kučak. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1.1-K1">5.2.1.2.1.1-K1. Davorka Matkova</h3>
+<h3 data-person-code="5.2.1.2.1.1-K1">
+  <strong>5.2.1.2.1.1-K1. Davorka Matkova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Matka Jakovljeva i Anice rođene Župčić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1-S1">5.2.1.2.1-S1. Josip Jakovljev</h3>
+<h3 data-person-code="5.2.1.2.1-S1">
+  <strong>5.2.1.2.1-S1. Josip Jakovljev <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Najstarije navedeno dijete Jakova Ivanova i Ruže rođene Meštrović. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.2.1-S2">5.2.1.2.1-S2. Stipo Jakovljev</h3>
+<h3 data-person-code="5.2.1.2.1-S2">
+  <strong>5.2.1.2.1-S2. Stipo Jakovljev <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Sin Jakova Ivanova i Ruže rođene Meštrović. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.2.1-S3">5.2.1.2.1-S3. Ivo Jakovljev</h3>
+<h3 data-person-code="5.2.1.2.1-S3">
+  <strong>5.2.1.2.1-S3. Ivo Jakovljev <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Sin Jakova Ivanova i Ruže rođene Meštrović. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.2.1-K1">5.2.1.2.1-K1. Mara Jakovljeva</h3>
+<h3 data-person-code="5.2.1.2.1-K1">
+  <strong>5.2.1.2.1-K1. Mara Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Ivanova i Ruže rođene Meštrović. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1-K2">5.2.1.2.1-K2. Joza Jakovljeva</h3>
+<h3 data-person-code="5.2.1.2.1-K2">
+  <strong>5.2.1.2.1-K2. Joza Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Ivanova i Ruže rođene Meštrović. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1-K3">5.2.1.2.1-K3. Milka Jakovljeva</h3>
+<h3 data-person-code="5.2.1.2.1-K3">
+  <strong>5.2.1.2.1-K3. Milka Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Ivanova i Ruže rođene Meštrović. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.1-K4">5.2.1.2.1-K4. Anđa Jakovljeva</h3>
+<h3 data-person-code="5.2.1.2.1-K4">
+  <strong>5.2.1.2.1-K4. Anđa Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Ivanova i Ruže rođene Meštrović. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2">5.2.1.2.2. Stipo Ivanov</h3>
+<h3 data-person-code="5.2.1.2.2">
+  <strong>5.2.1.2.2. Stipo Ivanov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Stipo, mlađi sin Ivana i Anđe rođene Erceg, oženio se Anom Sučić. Imali su sinove Ivu, Peru i Zvonimira te kćeri Ivu, Anđu i Ljubicu.</p>
-<h3 data-person-code="5.2.1.2.2-SP-1">5.2.1.2.2-SP-1. Ana Sučić</h3>
+<h3 data-person-code="5.2.1.2.2-SP-1">
+  <strong>5.2.1.2.2-SP-1. Ana Sučić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2.1">5.2.1.2.2.1. Zvonimir Stipin (1906.–1944.)</h3>
+<h3 data-person-code="5.2.1.2.2.1">
+  <strong>5.2.1.2.2.1. Zvonimir Stipin <span class="life-date">(★ 1906. – ✝ 1944.)</span></strong>
+</h3>
 <p>Zvonimir, najmlađi Stipin sin, oženio se 1930. godine u Beogradu Adelom Szepesi. Imali su Vladimira i Anetu.</p>
-<h3 data-person-code="5.2.1.2.2.1-SP-1">5.2.1.2.2.1-SP-1. Adela Szepesi</h3>
+<h3 data-person-code="5.2.1.2.2.1-SP-1">
+  <strong>5.2.1.2.2.1-SP-1. Adela Szepesi <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2.1.1">5.2.1.2.2.1.1. Vladimir Zvonimirov (1936.–1992.)</h3>
+<h3 data-person-code="5.2.1.2.2.1.1">
+  <strong>5.2.1.2.2.1.1. Vladimir Zvonimirov <span class="life-date">(★ 1936. – ✝ 1992.)</span></strong>
+</h3>
 <p>Vladimir se 1965. godine u Berlinu oženio Ingrid Schmarsch. Imali su potomke; podaci o živim članovima zaštićeni su.</p>
-<h3 data-person-code="5.2.1.2.2.1.1-SP-1">5.2.1.2.2.1.1-SP-1. Ingrid Schmarsch</h3>
+<h3 data-person-code="5.2.1.2.2.1.1-SP-1">
+  <strong>5.2.1.2.2.1.1-SP-1. Ingrid Schmarsch <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2.1.1-S1">5.2.1.2.2.1.1-S1. Zaštićeni osobni podaci</h3>
+<h3 data-person-code="5.2.1.2.2.1.1-S1"><strong>5.2.1.2.2.1.1-S1. Zaštićeni osobni podaci</strong></h3>
 <p class="public-privacy-note">Osobni podaci nisu javno objavljeni; u javnom prikazu ostaje samo šifra.</p>
-<h3 data-person-code="5.2.1.2.2.1.1-K1">5.2.1.2.2.1.1-K1. Zaštićeni osobni podaci</h3>
+<h3 data-person-code="5.2.1.2.2.1.1-K1"><strong>5.2.1.2.2.1.1-K1. Zaštićeni osobni podaci</strong></h3>
 <p class="public-privacy-note">Osobni podaci nisu javno objavljeni; u javnom prikazu ostaje samo šifra.</p>
-<h3 data-person-code="5.2.1.2.2.1-K1">5.2.1.2.2.1-K1. Aneta Zvonimirova</h3>
+<h3 data-person-code="5.2.1.2.2.1-K1">
+  <strong>5.2.1.2.2.1-K1. Aneta Zvonimirova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Zvonimira Stipina i Adele rođene Szepesi. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2-S1">5.2.1.2.2-S1. Ivo Stipin</h3>
+<h3 data-person-code="5.2.1.2.2-S1">
+  <strong>5.2.1.2.2-S1. Ivo Stipin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Sin Stipe Ivanova i Ane rođene Sučić. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.2.2-S2">5.2.1.2.2-S2. Pero Stipin</h3>
+<h3 data-person-code="5.2.1.2.2-S2">
+  <strong>5.2.1.2.2-S2. Pero Stipin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Sin Stipe Ivanova i Ane rođene Sučić. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.2.1.2.2-K1">5.2.1.2.2-K1. Iva Stipina</h3>
+<h3 data-person-code="5.2.1.2.2-K1">
+  <strong>5.2.1.2.2-K1. Iva Stipina <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Stipe Ivanova i Ane rođene Sučić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2-K2">5.2.1.2.2-K2. Anđa Stipina</h3>
+<h3 data-person-code="5.2.1.2.2-K2">
+  <strong>5.2.1.2.2-K2. Anđa Stipina <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Stipe Ivanova i Ane rođene Sučić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1.2.2-K3">5.2.1.2.2-K3. Ljubica Stipina</h3>
+<h3 data-person-code="5.2.1.2.2-K3">
+  <strong>5.2.1.2.2-K3. Ljubica Stipina <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Stipe Ivanova i Ane rođene Sučić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.2.1-S1">5.2.1-S1. Antun Josipov</h3>
+<h3 data-person-code="5.2.1-S1">
+  <strong>5.2.1-S1. Antun Josipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Najmlađi navedeni sin Josipa Jurina i Cvite rođene Knežević. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.3">5.3. Jakov Filipov</h3>
+<h3 data-person-code="5.3">
+  <strong>5.3. Jakov Filipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov, treći Filipov sin, ženio se dva puta. Iz prvog braka s Lucom rođenom Kuprešanin imao je kćeri Josipu i Peru. Iz drugog braka s Katom rođenom Perić imao je kćer Katu.</p>
-<h3 data-person-code="5.3-SP-1">5.3-SP-1. Luca Kuprešanin</h3>
+<h3 data-person-code="5.3-SP-1">
+  <strong>5.3-SP-1. Luca Kuprešanin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Prva supruga osobe Jakov Filipov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.3-SP-2">5.3-SP-2. Kata Perić</h3>
+<h3 data-person-code="5.3-SP-2">
+  <strong>5.3-SP-2. Kata Perić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Druga supruga osobe Jakov Filipov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.3-K1">5.3-K1. Josipa Jakovljeva</h3>
+<h3 data-person-code="5.3-K1">
+  <strong>5.3-K1. Josipa Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Filipova iz prvog braka s Lucom rođenom Kuprešanin. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.3-K2">5.3-K2. Pera Jakovljeva</h3>
+<h3 data-person-code="5.3-K2">
+  <strong>5.3-K2. Pera Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Filipova iz prvog braka s Lucom rođenom Kuprešanin. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.3-K3">5.3-K3. Kata Jakovljeva</h3>
+<h3 data-person-code="5.3-K3">
+  <strong>5.3-K3. Kata Jakovljeva <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Jakova Filipova iz drugog braka s Katom rođenom Perić. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.4">5.4. Ivan Filipov</h3>
+<h3 data-person-code="5.4">
+  <strong>5.4. Ivan Filipov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ivan, najmlađi Filipov sin, bio je oženjen Ivom rođenom Knežević. Imali su Agatu i Petra.</p>
-<h3 data-person-code="5.4-SP-1">5.4-SP-1. Iva Knežević</h3>
+<h3 data-person-code="5.4-SP-1">
+  <strong>5.4-SP-1. Iva Knežević <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Supruga navedenog člana obitelji. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.4.1">5.4.1. Petar Ivanov</h3>
+<h3 data-person-code="5.4.1">
+  <strong>5.4.1. Petar Ivanov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Petar se ženio dva puta. Prvi put oženio se Lucom Smoljić. Nije poznato jesu li imali djece. U drugom braku s Matijom rođenom Čelan imao je Nikolu, Agatu i Anu.</p>
-<h3 data-person-code="5.4.1-SP-1">5.4.1-SP-1. Luca Smoljić</h3>
+<h3 data-person-code="5.4.1-SP-1">
+  <strong>5.4.1-SP-1. Luca Smoljić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Prva supruga osobe Petar Ivanov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.4.1-SP-2">5.4.1-SP-2. Matija Čelan</h3>
+<h3 data-person-code="5.4.1-SP-2">
+  <strong>5.4.1-SP-2. Matija Čelan <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Druga supruga osobe Petar Ivanov. Podaci o njezinu rođenju i smrti nisu dostupni.</p>
-<h3 data-person-code="5.4.1-S1">5.4.1-S1. Nikola Petrov</h3>
+<h3 data-person-code="5.4.1-S1">
+  <strong>5.4.1-S1. Nikola Petrov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Sin Petra Ivanova iz drugog braka s Matijom rođenom Čelan. Bez dostupnih podataka o statusu nakon rođenja.</p>
-<h3 data-person-code="5.4.1-K1">5.4.1-K1. Agata Petrova</h3>
+<h3 data-person-code="5.4.1-K1">
+  <strong>5.4.1-K1. Agata Petrova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Petra Ivanova iz drugog braka s Matijom rođenom Čelan. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.4.1-K2">5.4.1-K2. Ana Petrova</h3>
+<h3 data-person-code="5.4.1-K2">
+  <strong>5.4.1-K2. Ana Petrova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Petra Ivanova iz drugog braka s Matijom rođenom Čelan. Podaci o udaji i kasnijem životu nisu dostupni.</p>
-<h3 data-person-code="5.4-K1">5.4-K1. Agata Ivanova</h3>
+<h3 data-person-code="5.4-K1">
+  <strong>5.4-K1. Agata Ivanova <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kći Ivana Filipova i Ive rođene Knežević. Podaci o udaji i kasnijem životu nisu dostupni.</p>
 
 <footer id="izvor-podataka">
@@ -247,26 +450,15 @@
 
       </div>
 
-      <section
-        class="branch-diagram-link"
-        aria-labelledby="filipov-diagram-title">
-
-        <div>
-          <h2 id="filipov-diagram-title">
-            Interaktivni dijagram Filipove livanjske grane
-          </h2>
-
-          <p>
-            Otvorite pripadajući interaktivni rodoslovni dijagram livanjskih Tandara.
-          </p>
-        </div>
-
+      <div class="filip-diagram-portal" aria-label="Filipov dijagram">
+        <span class="filip-diagram-portal__line" aria-hidden="true"></span>
         <a
-          class="branch-diagram-link__button"
-          href="filipovdijagram.html">
-          Otvori dijagram
+          class="filip-diagram-portal__box"
+          href="filipovdijagram.html"
+          aria-label="Filipov dijagram">
+          FILIPOV<br>DIJAGRAM
         </a>
-      </section>
+      </div>
 
       <section class="tree-note">
         <h3>Napomena</h3>
@@ -284,4 +476,3 @@
 
 </body>
 </html>
-
