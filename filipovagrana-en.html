@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +37,70 @@
 
   <script defer
           src="../tandara-common/js/branch-page-engine.js?v=20260918-1"></script>
+
+  <style>
+    /* Virtualni ulaz u Filipov dijagram — vizualno usklađen s boxom "Livanjske Tandare". */
+    .filip-diagram-portal{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      width:100%;
+      margin:34px 0 26px;
+      position:relative;
+    }
+
+    .filip-diagram-portal__line{
+      display:block;
+      width:3px;
+      height:54px;
+      background:#7a5a2f;
+      border-radius:2px;
+      margin:0 auto;
+    }
+
+    .filip-diagram-portal__box{
+      width:150px;
+      height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-sizing:border-box;
+
+      background:rgba(248,232,190,.96);
+      border:2px solid #7a5a2f;
+      border-radius:8px;
+      box-shadow:0 3px 8px rgba(0,0,0,.28);
+
+      font-family:Georgia,serif;
+      font-size:13px;
+      font-weight:700;
+      line-height:1.08;
+      text-align:center;
+      color:#3b2a1a;
+      text-decoration:none;
+
+      transition:transform .15s ease, background .15s ease, color .15s ease;
+    }
+
+    .filip-diagram-portal__box:hover,
+    .filip-diagram-portal__box:focus-visible{
+      background:#d4af37;
+      color:#fff;
+      transform:scale(1.04);
+      outline:3px solid rgba(122,90,47,.24);
+      outline-offset:3px;
+    }
+
+    @media(max-width:640px){
+      .filip-diagram-portal__line{height:42px}
+      .filip-diagram-portal__box{
+        width:150px;
+        height:70px;
+      }
+    }
+  </style>
+
 </head>
 
 <body
@@ -58,7 +121,8 @@
       <div class="branch-text-block">
 
 <h1 id="filip-branch">TANDARAS OF LIVNO – FILIP’S BRANCH</h1>
-<h2 class="branch-root-title" data-person-code="5.0"><strong>5.0. Filip Tandara – Founder of the Livno Branch</strong></h2>
+<h2 class="branch-root-title" data-person-code="5.0"><strong>5.0. Filip Tandara – Founder of the Livno Branch
+      <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong></h2>
 
 <p>Filip Tandara is regarded as the founder of the Livno branch of the Tandara family. He was married to Jela Bralić. They had four sons: Mate, Jure, Jakov and Ivan.</p>
 <h3>Origin of Filip’s Line</h3>
@@ -81,155 +145,293 @@
 
 <hr class="family-separator">
 
-<h3 data-person-code="5.0">5.0. Filip Tandara — Founder of the Livno branch</h3>
+<h3 data-person-code="5.0">
+  <strong>5.0. Filip Tandara — Founder of the Livno branch <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Filip Tandara is regarded as the founder of the Livno branch of the Tandara family. He was married to Jela Bralić. They had four sons: Mate, Jure, Jakov and Ivan. In this presentation he is marked as a possible fifth son of Ivan Tandara of Ričice; that relationship has not been confirmed by a direct document.</p>
-<h3 data-person-code="5.0-SP-1">5.0-SP-1. Jela Bralić</h3>
+<h3 data-person-code="5.0-SP-1">
+  <strong>5.0-SP-1. Jela Bralić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Filip Tandara — Founder of the Livno branch. Her birth and death details are not available.</p>
-<h3 data-person-code="5.1">5.1. Mate — son of Filip</h3>
+<h3 data-person-code="5.1">
+  <strong>5.1. Mate — son of Filip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Mate, Filip’s eldest son, married Kata Jazvić. They had a daughter, Jela.</p>
-<h3 data-person-code="5.1-SP-1">5.1-SP-1. Kata Jazvić</h3>
+<h3 data-person-code="5.1-SP-1">
+  <strong>5.1-SP-1. Kata Jazvić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Mate — son of Filip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.1-K1">5.1-K1. Jela — daughter of Mate</h3>
+<h3 data-person-code="5.1-K1">
+  <strong>5.1-K1. Jela — daughter of Mate <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jela was the daughter of Mate and Kata, née Jazvić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2">5.2. Jure — son of Filip (–1804)</h3>
+<h3 data-person-code="5.2">
+  <strong>5.2. Jure — son of Filip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ 1804)</span></strong>
+</h3>
 <p>Jure, Filip’s second son, married Manda Matić. They had a son, Josip.</p>
-<h3 data-person-code="5.2-SP-1">5.2-SP-1. Manda Matić</h3>
+<h3 data-person-code="5.2-SP-1">
+  <strong>5.2-SP-1. Manda Matić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Jure — son of Filip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1">5.2.1. Josip — son of Jure</h3>
+<h3 data-person-code="5.2.1">
+  <strong>5.2.1. Josip — son of Jure <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Josip, Jure’s son, married Cvita Knežević in 1818. They had three sons: Jakov, Ivan and Antun.</p>
-<h3 data-person-code="5.2.1-SP-1">5.2.1-SP-1. Cvita Knežević</h3>
+<h3 data-person-code="5.2.1-SP-1">
+  <strong>5.2.1-SP-1. Cvita Knežević <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Josip — son of Jure. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.1">5.2.1.1. Jakov — son of Josip</h3>
+<h3 data-person-code="5.2.1.1">
+  <strong>5.2.1.1. Jakov — son of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov, Josip’s eldest son, married Ruža Rimac. They had a son, Josip.</p>
-<h3 data-person-code="5.2.1.1-SP-1">5.2.1.1-SP-1. Ruža Rimac</h3>
+<h3 data-person-code="5.2.1.1-SP-1">
+  <strong>5.2.1.1-SP-1. Ruža Rimac <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Jakov — son of Josip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.1.1">5.2.1.1.1. Josip — son of Jakov</h3>
+<h3 data-person-code="5.2.1.1.1">
+  <strong>5.2.1.1.1. Josip — son of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Josip, Jakov’s son, married Anđa Gabrić. They had two sons, Jozo and Mato, and three daughters, Ana, Mara and Anđa.</p>
-<h3 data-person-code="5.2.1.1.1-SP-1">5.2.1.1.1-SP-1. Anđa Gabrić</h3>
+<h3 data-person-code="5.2.1.1.1-SP-1">
+  <strong>5.2.1.1.1-SP-1. Anđa Gabrić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Josip — son of Jakov. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.1.1.1">5.2.1.1.1.1. Jozo — son of Josip (1884–)</h3>
+<h3 data-person-code="5.2.1.1.1.1">
+  <strong>5.2.1.1.1.1. Jozo — son of Josip <span class="life-date">(★ 1884 – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jozo, Josip’s son, married twice. In his first marriage, to Marica Mioč, he had a son, Ante Božidar. In his second marriage, to Kata Pastuh, he had a son, Jakov, and a daughter, Ana.</p>
-<h3 data-person-code="5.2.1.1.1.1-SP-1">5.2.1.1.1.1-SP-1. Marica Mioč</h3>
+<h3 data-person-code="5.2.1.1.1.1-SP-1">
+  <strong>5.2.1.1.1.1-SP-1. Marica Mioč <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>First wife of Jozo — son of Josip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.1.1.1-SP-2">5.2.1.1.1.1-SP-2. Kata Pastuh</h3>
+<h3 data-person-code="5.2.1.1.1.1-SP-2">
+  <strong>5.2.1.1.1.1-SP-2. Kata Pastuh <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Second wife of Jozo — son of Josip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.1.1.1-S1">5.2.1.1.1.1-S1. Ante Božidar — son of Jozo</h3>
+<h3 data-person-code="5.2.1.1.1.1-S1">
+  <strong>5.2.1.1.1.1-S1. Ante Božidar — son of Jozo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ante Božidar was the son of Jozo and Marica, née Mioč, from Jozo’s first marriage. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.1.1.1-S2">5.2.1.1.1.1-S2. Jakov — son of Jozo</h3>
+<h3 data-person-code="5.2.1.1.1.1-S2">
+  <strong>5.2.1.1.1.1-S2. Jakov — son of Jozo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov was the son of Jozo and Kata, née Pastuh, from Jozo’s second marriage. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.1.1.1-K1">5.2.1.1.1.1-K1. Ana — daughter of Jozo</h3>
+<h3 data-person-code="5.2.1.1.1.1-K1">
+  <strong>5.2.1.1.1.1-K1. Ana — daughter of Jozo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ana was the daughter of Jozo and Kata, née Pastuh, from Jozo’s second marriage. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.1.1-S1">5.2.1.1.1-S1. Mato — son of Josip</h3>
+<h3 data-person-code="5.2.1.1.1-S1">
+  <strong>5.2.1.1.1-S1. Mato — son of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Mato was the son of Josip and Anđa, née Gabrić. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.1.1-K1">5.2.1.1.1-K1. Ana — daughter of Josip</h3>
+<h3 data-person-code="5.2.1.1.1-K1">
+  <strong>5.2.1.1.1-K1. Ana — daughter of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ana was the daughter of Josip and Anđa, née Gabrić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.1.1-K2">5.2.1.1.1-K2. Mara — daughter of Josip</h3>
+<h3 data-person-code="5.2.1.1.1-K2">
+  <strong>5.2.1.1.1-K2. Mara — daughter of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Mara was the daughter of Josip and Anđa, née Gabrić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.1.1-K3">5.2.1.1.1-K3. Anđa — daughter of Josip</h3>
+<h3 data-person-code="5.2.1.1.1-K3">
+  <strong>5.2.1.1.1-K3. Anđa — daughter of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Anđa was the daughter of Josip and Anđa, née Gabrić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2">5.2.1.2. Ivan — son of Josip</h3>
+<h3 data-person-code="5.2.1.2">
+  <strong>5.2.1.2. Ivan — son of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ivan, the second son of Josip and Cvita, née Knežević, married twice. He first married Ruža Laštrić in 1859. No record has been found that they had children. He later married Anđa Erceg. They had two sons, Jakov and Stipo.</p>
-<h3 data-person-code="5.2.1.2-SP-1">5.2.1.2-SP-1. Ruža Laštrić</h3>
+<h3 data-person-code="5.2.1.2-SP-1">
+  <strong>5.2.1.2-SP-1. Ruža Laštrić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>First wife of Ivan — son of Josip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2-SP-2">5.2.1.2-SP-2. Anđa Erceg</h3>
+<h3 data-person-code="5.2.1.2-SP-2">
+  <strong>5.2.1.2-SP-2. Anđa Erceg <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Second wife of Ivan — son of Josip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.1">5.2.1.2.1. Jakov — son of Ivan</h3>
+<h3 data-person-code="5.2.1.2.1">
+  <strong>5.2.1.2.1. Jakov — son of Ivan <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov, Ivan’s son, married Ruža Meštrović in Livno in 1894. They had eight children: Josip, Stipo, Ivo, Matko, Mara, Joza, Milka and Anđa.</p>
-<h3 data-person-code="5.2.1.2.1-SP-1">5.2.1.2.1-SP-1. Ruža Meštrović</h3>
+<h3 data-person-code="5.2.1.2.1-SP-1">
+  <strong>5.2.1.2.1-SP-1. Ruža Meštrović <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Jakov — son of Ivan. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.1.1">5.2.1.2.1.1. Matko — son of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1.1">
+  <strong>5.2.1.2.1.1. Matko — son of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Matko, Jakov’s youngest son, married Anica Župčić. They had a son, Krešimir, and a daughter, Davorka.</p>
-<h3 data-person-code="5.2.1.2.1.1-SP-1">5.2.1.2.1.1-SP-1. Anica Župčić</h3>
+<h3 data-person-code="5.2.1.2.1.1-SP-1">
+  <strong>5.2.1.2.1.1-SP-1. Anica Župčić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Matko — son of Jakov. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.1.1.1">5.2.1.2.1.1.1. Krešimir — son of Matko</h3>
+<h3 data-person-code="5.2.1.2.1.1.1">
+  <strong>5.2.1.2.1.1.1. Krešimir — son of Matko <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Krešimir, Matko’s son, married Biserka Kučak. They had descendants; details of living family members are protected.</p>
-<h3 data-person-code="5.2.1.2.1.1.1-SP-1">5.2.1.2.1.1.1-SP-1. Biserka Kučak</h3>
+<h3 data-person-code="5.2.1.2.1.1.1-SP-1">
+  <strong>5.2.1.2.1.1.1-SP-1. Biserka Kučak <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Krešimir — son of Matko. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1">5.2.1.2.1.1.1.1. Protected personal data</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1"><strong>5.2.1.2.1.1.1.1. Protected personal data</strong></h3>
 <p class="public-privacy-note">Personal data are not publicly displayed; only the family code remains visible.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1-SP-1">5.2.1.2.1.1.1.1-SP-1. Protected personal data</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1-SP-1"><strong>5.2.1.2.1.1.1.1-SP-1. Protected personal data</strong></h3>
 <p class="public-privacy-note">Personal data are not publicly displayed; only the family code remains visible.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1-S1">5.2.1.2.1.1.1.1-S1. Protected personal data</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1-S1"><strong>5.2.1.2.1.1.1.1-S1. Protected personal data</strong></h3>
 <p class="public-privacy-note">Personal data are not publicly displayed; only the family code remains visible.</p>
-<h3 data-person-code="5.2.1.2.1.1.1.1-S2">5.2.1.2.1.1.1.1-S2. Protected personal data</h3>
+<h3 data-person-code="5.2.1.2.1.1.1.1-S2"><strong>5.2.1.2.1.1.1.1-S2. Protected personal data</strong></h3>
 <p class="public-privacy-note">Personal data are not publicly displayed; only the family code remains visible.</p>
-<h3 data-person-code="5.2.1.2.1.1.1-K1">5.2.1.2.1.1.1-K1. Gordana — daughter of Krešimir</h3>
+<h3 data-person-code="5.2.1.2.1.1.1-K1">
+  <strong>5.2.1.2.1.1.1-K1. Gordana — daughter of Krešimir <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Gordana was the daughter of Krešimir and Biserka, née Kučak. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.1.1-K1">5.2.1.2.1.1-K1. Davorka — daughter of Matko</h3>
+<h3 data-person-code="5.2.1.2.1.1-K1">
+  <strong>5.2.1.2.1.1-K1. Davorka — daughter of Matko <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Davorka is the daughter of Matko and Anica, née Župčić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.1-S1">5.2.1.2.1-S1. Josip — son of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-S1">
+  <strong>5.2.1.2.1-S1. Josip — son of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Josip was the eldest recorded son of Jakov and Ruža, née Meštrović. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.2.1-S2">5.2.1.2.1-S2. Stipo — son of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-S2">
+  <strong>5.2.1.2.1-S2. Stipo — son of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Stipo was the son of Jakov and Ruža, née Meštrović. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.2.1-S3">5.2.1.2.1-S3. Ivo — son of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-S3">
+  <strong>5.2.1.2.1-S3. Ivo — son of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ivo was the son of Jakov and Ruža, née Meštrović. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.2.1-K1">5.2.1.2.1-K1. Mara — daughter of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-K1">
+  <strong>5.2.1.2.1-K1. Mara — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Mara was the daughter of Jakov and Ruža, née Meštrović. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.1-K2">5.2.1.2.1-K2. Joza — daughter of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-K2">
+  <strong>5.2.1.2.1-K2. Joza — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Joza was the daughter of Jakov and Ruža, née Meštrović. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.1-K3">5.2.1.2.1-K3. Milka — daughter of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-K3">
+  <strong>5.2.1.2.1-K3. Milka — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Milka was the daughter of Jakov and Ruža, née Meštrović. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.1-K4">5.2.1.2.1-K4. Anđa — daughter of Jakov</h3>
+<h3 data-person-code="5.2.1.2.1-K4">
+  <strong>5.2.1.2.1-K4. Anđa — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Anđa was the daughter of Jakov and Ruža, née Meštrović. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.2">5.2.1.2.2. Stipo — son of Ivan</h3>
+<h3 data-person-code="5.2.1.2.2">
+  <strong>5.2.1.2.2. Stipo — son of Ivan <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Stipo, the younger son of Ivan and Anđa, née Erceg, married Ana Sučić. They had three sons, Ivo, Pero and Zvonimir, and three daughters, Iva, Anđa and Ljubica.</p>
-<h3 data-person-code="5.2.1.2.2-SP-1">5.2.1.2.2-SP-1. Ana Sučić</h3>
+<h3 data-person-code="5.2.1.2.2-SP-1">
+  <strong>5.2.1.2.2-SP-1. Ana Sučić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Stipo — son of Ivan. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.2.1">5.2.1.2.2.1. Zvonimir — son of Stipo (1906–1944)</h3>
+<h3 data-person-code="5.2.1.2.2.1">
+  <strong>5.2.1.2.2.1. Zvonimir — son of Stipo <span class="life-date">(★ 1906 – ✝ 1944)</span></strong>
+</h3>
 <p>Zvonimir, Stipo’s youngest son, married Adela Szepesi in Belgrade in 1930. They had a son, Vladimir, and a daughter, Aneta.</p>
-<h3 data-person-code="5.2.1.2.2.1-SP-1">5.2.1.2.2.1-SP-1. Adela Szepesi</h3>
+<h3 data-person-code="5.2.1.2.2.1-SP-1">
+  <strong>5.2.1.2.2.1-SP-1. Adela Szepesi <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Zvonimir — son of Stipo. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.2.1.1">5.2.1.2.2.1.1. Vladimir — son of Zvonimir (1936–1992)</h3>
+<h3 data-person-code="5.2.1.2.2.1.1">
+  <strong>5.2.1.2.2.1.1. Vladimir — son of Zvonimir <span class="life-date">(★ 1936 – ✝ 1992)</span></strong>
+</h3>
 <p>Vladimir, Zvonimir’s son, married Ingrid Schmarsch in Berlin in 1965. They had children; details of living family members are protected.</p>
-<h3 data-person-code="5.2.1.2.2.1.1-SP-1">5.2.1.2.2.1.1-SP-1. Ingrid Schmarsch</h3>
+<h3 data-person-code="5.2.1.2.2.1.1-SP-1">
+  <strong>5.2.1.2.2.1.1-SP-1. Ingrid Schmarsch <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Vladimir — son of Zvonimir. Her birth and death details are not available.</p>
-<h3 data-person-code="5.2.1.2.2.1.1-S1">5.2.1.2.2.1.1-S1. Protected personal data</h3>
+<h3 data-person-code="5.2.1.2.2.1.1-S1"><strong>5.2.1.2.2.1.1-S1. Protected personal data</strong></h3>
 <p class="public-privacy-note">Personal data are not publicly displayed; only the family code remains visible.</p>
-<h3 data-person-code="5.2.1.2.2.1.1-K1">5.2.1.2.2.1.1-K1. Protected personal data</h3>
+<h3 data-person-code="5.2.1.2.2.1.1-K1"><strong>5.2.1.2.2.1.1-K1. Protected personal data</strong></h3>
 <p class="public-privacy-note">Personal data are not publicly displayed; only the family code remains visible.</p>
-<h3 data-person-code="5.2.1.2.2.1-K1">5.2.1.2.2.1-K1. Aneta — daughter of Zvonimir</h3>
+<h3 data-person-code="5.2.1.2.2.1-K1">
+  <strong>5.2.1.2.2.1-K1. Aneta — daughter of Zvonimir <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Aneta is the daughter of Zvonimir and Adela, née Szepesi. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.2-S1">5.2.1.2.2-S1. Ivo — son of Stipo</h3>
+<h3 data-person-code="5.2.1.2.2-S1">
+  <strong>5.2.1.2.2-S1. Ivo — son of Stipo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ivo was the son of Stipo and Ana, née Sučić. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.2.2-S2">5.2.1.2.2-S2. Pero — son of Stipo</h3>
+<h3 data-person-code="5.2.1.2.2-S2">
+  <strong>5.2.1.2.2-S2. Pero — son of Stipo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Pero was the son of Stipo and Ana, née Sučić. No further information is available after the birth record.</p>
-<h3 data-person-code="5.2.1.2.2-K1">5.2.1.2.2-K1. Iva — daughter of Stipo</h3>
+<h3 data-person-code="5.2.1.2.2-K1">
+  <strong>5.2.1.2.2-K1. Iva — daughter of Stipo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Iva was the daughter of Stipo and Ana, née Sučić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.2-K2">5.2.1.2.2-K2. Anđa — daughter of Stipo</h3>
+<h3 data-person-code="5.2.1.2.2-K2">
+  <strong>5.2.1.2.2-K2. Anđa — daughter of Stipo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Anđa was the daughter of Stipo and Ana, née Sučić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1.2.2-K3">5.2.1.2.2-K3. Ljubica — daughter of Stipo</h3>
+<h3 data-person-code="5.2.1.2.2-K3">
+  <strong>5.2.1.2.2-K3. Ljubica — daughter of Stipo <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ljubica was the daughter of Stipo and Ana, née Sučić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.2.1-S1">5.2.1-S1. Antun — son of Josip</h3>
+<h3 data-person-code="5.2.1-S1">
+  <strong>5.2.1-S1. Antun — son of Josip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Antun was the youngest recorded son of Josip and Cvita, née Knežević. No further information is available after the birth record.</p>
-<h3 data-person-code="5.3">5.3. Jakov — son of Filip</h3>
+<h3 data-person-code="5.3">
+  <strong>5.3. Jakov — son of Filip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Jakov, Filip’s third son, married twice. In his first marriage, to Luca, née Kuprešanin, he had two daughters, Josipa and Pera. In his second marriage, to Kata, née Perić, he had a daughter, Kata.</p>
-<h3 data-person-code="5.3-SP-1">5.3-SP-1. Luca Kuprešanin</h3>
+<h3 data-person-code="5.3-SP-1">
+  <strong>5.3-SP-1. Luca Kuprešanin <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>First wife of Jakov — son of Filip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.3-SP-2">5.3-SP-2. Kata Perić</h3>
+<h3 data-person-code="5.3-SP-2">
+  <strong>5.3-SP-2. Kata Perić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Second wife of Jakov — son of Filip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.3-K1">5.3-K1. Josipa — daughter of Jakov</h3>
+<h3 data-person-code="5.3-K1">
+  <strong>5.3-K1. Josipa — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Josipa was Jakov’s daughter from his first marriage to Luca, née Kuprešanin. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.3-K2">5.3-K2. Pera — daughter of Jakov</h3>
+<h3 data-person-code="5.3-K2">
+  <strong>5.3-K2. Pera — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Pera was Jakov’s daughter from his first marriage to Luca, née Kuprešanin. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.3-K3">5.3-K3. Kata — daughter of Jakov</h3>
+<h3 data-person-code="5.3-K3">
+  <strong>5.3-K3. Kata — daughter of Jakov <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Kata was Jakov’s daughter from his second marriage to Kata, née Perić. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.4">5.4. Ivan — son of Filip</h3>
+<h3 data-person-code="5.4">
+  <strong>5.4. Ivan — son of Filip <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ivan, Filip’s youngest son, was married to Iva, née Knežević. They had a daughter, Agata, and a son, Petar.</p>
-<h3 data-person-code="5.4-SP-1">5.4-SP-1. Iva Knežević</h3>
+<h3 data-person-code="5.4-SP-1">
+  <strong>5.4-SP-1. Iva Knežević <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Wife of Ivan — son of Filip. Her birth and death details are not available.</p>
-<h3 data-person-code="5.4.1">5.4.1. Petar — son of Ivan</h3>
+<h3 data-person-code="5.4.1">
+  <strong>5.4.1. Petar — son of Ivan <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Petar, Ivan’s son, married twice. He first married Luca Smoljić. It is not known whether they had children. In his second marriage, to Matija, née Čelan, he had a son, Nikola, and two daughters, Agata and Ana.</p>
-<h3 data-person-code="5.4.1-SP-1">5.4.1-SP-1. Luca Smoljić</h3>
+<h3 data-person-code="5.4.1-SP-1">
+  <strong>5.4.1-SP-1. Luca Smoljić <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>First wife of Petar — son of Ivan. Her birth and death details are not available.</p>
-<h3 data-person-code="5.4.1-SP-2">5.4.1-SP-2. Matija Čelan</h3>
+<h3 data-person-code="5.4.1-SP-2">
+  <strong>5.4.1-SP-2. Matija Čelan <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Second wife of Petar — son of Ivan. Her birth and death details are not available.</p>
-<h3 data-person-code="5.4.1-S1">5.4.1-S1. Nikola — son of Petar</h3>
+<h3 data-person-code="5.4.1-S1">
+  <strong>5.4.1-S1. Nikola — son of Petar <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Nikola was Petar’s son from his second marriage to Matija, née Čelan. No further information is available after the birth record.</p>
-<h3 data-person-code="5.4.1-K1">5.4.1-K1. Agata — daughter of Petar</h3>
+<h3 data-person-code="5.4.1-K1">
+  <strong>5.4.1-K1. Agata — daughter of Petar <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Agata was Petar’s daughter from his second marriage to Matija, née Čelan. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.4.1-K2">5.4.1-K2. Ana — daughter of Petar</h3>
+<h3 data-person-code="5.4.1-K2">
+  <strong>5.4.1-K2. Ana — daughter of Petar <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Ana was Petar’s daughter from his second marriage to Matija, née Čelan. No data are available on her marriage or later life.</p>
-<h3 data-person-code="5.4-K1">5.4-K1. Agata — daughter of Ivan</h3>
+<h3 data-person-code="5.4-K1">
+  <strong>5.4-K1. Agata — daughter of Ivan <span class="life-date">(★ <span class="date-ng">N.G.</span> – ✝ <span class="date-ng">N.G.</span>)</span></strong>
+</h3>
 <p>Agata was the daughter of Ivan and Iva, née Knežević. No data are available on her marriage or later life.</p>
 
 <footer id="data-sources">
@@ -242,26 +444,15 @@
 
       </div>
 
-      <section
-        class="branch-diagram-link"
-        aria-labelledby="filip-diagram-title">
-
-        <div>
-          <h2 id="filip-diagram-title">
-            Interactive diagram of Filip’s Livno branch
-          </h2>
-
-          <p>
-            Open the corresponding interactive genealogy diagram of the Tandaras of Livno.
-          </p>
-        </div>
-
+      <div class="filip-diagram-portal" aria-label="Filip’s Diagram">
+        <span class="filip-diagram-portal__line" aria-hidden="true"></span>
         <a
-          class="branch-diagram-link__button"
-          href="filipovdijagram-en.html">
-          Open diagram
+          class="filip-diagram-portal__box"
+          href="filipovdijagram-en.html"
+          aria-label="Filip’s Diagram">
+          FILIP’S<br>DIAGRAM
         </a>
-      </section>
+      </div>
 
       <section class="tree-note">
         <h3>Note</h3>
