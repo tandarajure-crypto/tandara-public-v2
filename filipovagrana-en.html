@@ -37,70 +37,6 @@
 
   <script defer
           src="../tandara-common/js/branch-page-engine.js?v=20260918-1"></script>
-
-  <style>
-    /* Virtualni ulaz u Filipov dijagram — vizualno usklađen s boxom "Livanjske Tandare". */
-    .filip-diagram-portal{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-start;
-      width:100%;
-      margin:34px 0 26px;
-      position:relative;
-    }
-
-    .filip-diagram-portal__line{
-      display:block;
-      width:3px;
-      height:54px;
-      background:#7a5a2f;
-      border-radius:2px;
-      margin:0 auto;
-    }
-
-    .filip-diagram-portal__box{
-      width:150px;
-      height:70px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-sizing:border-box;
-
-      background:rgba(248,232,190,.96);
-      border:2px solid #7a5a2f;
-      border-radius:8px;
-      box-shadow:0 3px 8px rgba(0,0,0,.28);
-
-      font-family:Georgia,serif;
-      font-size:13px;
-      font-weight:700;
-      line-height:1.08;
-      text-align:center;
-      color:#3b2a1a;
-      text-decoration:none;
-
-      transition:transform .15s ease, background .15s ease, color .15s ease;
-    }
-
-    .filip-diagram-portal__box:hover,
-    .filip-diagram-portal__box:focus-visible{
-      background:#d4af37;
-      color:#fff;
-      transform:scale(1.04);
-      outline:3px solid rgba(122,90,47,.24);
-      outline-offset:3px;
-    }
-
-    @media(max-width:640px){
-      .filip-diagram-portal__line{height:42px}
-      .filip-diagram-portal__box{
-        width:150px;
-        height:70px;
-      }
-    }
-  </style>
-
 </head>
 
 <body
@@ -444,23 +380,42 @@
 
       </div>
 
-      <div class="filip-diagram-portal" aria-label="Filip’s Diagram">
-        <span class="filip-diagram-portal__line" aria-hidden="true"></span>
+      <section
+        class="branch-diagram-link"
+        aria-labelledby="filip-diagram-title">
+
+        <div>
+
+          <h2 id="filip-diagram-title">
+            Interactive diagram of Filip’s Livno branch
+          </h2>
+
+          <p>
+            Open the corresponding interactive genealogical diagram of this family branch.
+          </p>
+
+        </div>
+
         <a
-          class="filip-diagram-portal__box"
-          href="filipovdijagram-en.html"
-          aria-label="Filip’s Diagram">
-          FILIP’S<br>DIAGRAM
+          class="branch-diagram-link__button"
+          href="filipovdijagram-en.html">
+          Open diagram
         </a>
-      </div>
+
+      </section>
 
       <section class="tree-note">
+
         <h3>Note</h3>
+
         <p>
-          Filip Tandara is designated here by the code <strong>5.0</strong>.
-          His possible connection with Ivan Tandara of Ričice is presented as a
-          genealogical hypothesis, not as a relationship confirmed by a direct document.
+          The complete family tree of this family branch is available in the <strong>interactive diagram</strong> opened from the box above.
         </p>
+
+        <p>
+          On the Digital Archive of the Tandara Family home page, select the clickable box “<strong>Tandaras of Livno</strong>”. On this page, then click “<strong>Open diagram</strong>” to display Filip’s Livno branch.
+        </p>
+
       </section>
 
       <div id="common-branch-footer"></div>
